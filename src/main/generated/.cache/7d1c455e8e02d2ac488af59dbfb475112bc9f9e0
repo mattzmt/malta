@@ -1,0 +1,9 @@
+// 1.21.8	-999999999-01-01T00:00:00	malta/ModRecipeProvider
+5427265c396f54cf48e4793ade18613d5cad854a data/malta/advancement/recipes/food/curdled_milk_bucket_from_smelting.json
+bc867d794d56d49cf1db190e6e6f8a089db93293 data/malta/advancement/recipes/food/curdled_milk_bucket_from_smoking.json
+8050abab0115899925a9fd12c5db7a96e52c2150 data/malta/advancement/recipes/food/gbejna.json
+ef9f701439b0a658fe3794eaa9a72a2f90807e49 data/malta/advancement/recipes/food/peppered_gbejna.json
+ce7bbe9e0c03e545e041363cb20673405bd0ae80 data/malta/recipe/curdled_milk_bucket_from_smelting.json
+6f52093c1b665412c0943d9e314e0c988e6f052d data/malta/recipe/curdled_milk_bucket_from_smoking.json
+a433230240c4cfb9cc2c2d9a3dbc6d126a2dfef8 data/malta/recipe/gbejna.json
+5c9e1fd4f2c4d3ba8c1ef24c74588e24d4614d41 data/malta/recipe/peppered_gbejna.json

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gbejna": {
+      "conditions": {
+        "items": [
+          {
+            "items": "malta:gbejna"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_peppercorns": {
+      "conditions": {
+        "items": [
+          {
+            "items": "malta:peppercorns"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "malta:peppered_gbejna"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gbejna",
+      "has_peppercorns"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "malta:peppered_gbejna"
+    ]
+  }
+}
