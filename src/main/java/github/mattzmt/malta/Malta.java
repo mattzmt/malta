@@ -20,7 +20,7 @@ public class Malta implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("malta mod initialised");
+		LOGGER.info("Malta mod initialised");
 
         ModItems.load();
         ModItemGroups.load();

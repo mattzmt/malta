@@ -29,7 +29,7 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
         //ITEM GROUPS
-        addText(translationBuilder, ModItemGroups.MALTA_GROUP_TITLE, "Not Enough Variants");
+        addText(translationBuilder, ModItemGroups.MALTA_GROUP_TITLE, "Malta");
 
         //ITEMS
         translationBuilder.add(ModItems.CURDLED_MILK_BUCKET, "Curdled Milk Bucket");
