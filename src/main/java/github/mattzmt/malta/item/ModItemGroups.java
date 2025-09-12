@@ -1,6 +1,7 @@
 package github.mattzmt.malta.item;
 
 import github.mattzmt.malta.Malta;
+import github.mattzmt.malta.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
@@ -17,6 +18,18 @@ public class ModItemGroups {
                 entries.add(ModItems.GBEJNA);
                 entries.add(ModItems.PEPPERED_GBEJNA);
                 entries.add(ModItems.PEPPERCORNS);
+                entries.add(ModItems.DOUGH);
+                entries.add(ModItems.GALLETTA);
+
+                entries.add(ModBlocks.DATE_PALM_LEAVES);
+                entries.add(ModBlocks.DATE_BUNCH);
+                entries.add(ModBlocks.DATE_PALM_LOG);
+                entries.add(ModBlocks.DATE_PALM_WOOD);
+                entries.add(ModBlocks.STRIPPED_DATE_PALM_LOG);
+                entries.add(ModBlocks.STRIPPED_DATE_PALM_WOOD);
+                entries.add(ModBlocks.DATE_PALM_PLANKS);
+                entries.add(ModBlocks.DATE_PALM_SAPLING.asItem());
+                entries.add(ModItems.DATES);
             }).build()
     );
 

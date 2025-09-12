@@ -3,10 +3,12 @@ package github.mattzmt.malta.block;
 import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.block.custom.BlackPepperCropBlock;
 import github.mattzmt.malta.item.ModItems;
+import github.mattzmt.malta.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -26,206 +28,83 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .registryKey(BLACK_PEPPER_CROP_KEY)));
 
+    public static final RegistryKey<Block> DATE_BUNCH_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_bunch"));
+    public static final Block DATE_BUNCH = registerWithItem(
+            "date_bunch",
+            DATE_BUNCH_KEY,
+            new HangingRootsBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.TERRACOTTA_ORANGE)
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.WART_BLOCK)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .registryKey(DATE_BUNCH_KEY)));
+
+    public static final RegistryKey<Block> DATE_PALM_LEAVES_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_leaves"));
+    public static final Block DATE_PALM_LEAVES = registerWithItem(
+            "date_palm_leaves",
+            DATE_PALM_LEAVES_KEY,
+            new TintedParticleLeavesBlock(0, AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)
+                    .registryKey(DATE_PALM_LEAVES_KEY)));
+
+    public static final RegistryKey<Block> DATE_PALM_LOG_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_log"));
+    public static final Block DATE_PALM_LOG = registerWithItem(
+            "date_palm_log",
+            DATE_PALM_LOG_KEY,
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).registryKey(DATE_PALM_LOG_KEY)));
+
+    public static final RegistryKey<Block> DATE_PALM_WOOD_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_wood"));
+    public static final Block DATE_PALM_WOOD = registerWithItem(
+            "date_palm_wood",
+            DATE_PALM_WOOD_KEY,
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).registryKey(DATE_PALM_WOOD_KEY)));
+
+    public static final RegistryKey<Block> STRIPPED_DATE_PALM_LOG_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("stripped_date_palm_log"));
+    public static final Block STRIPPED_DATE_PALM_LOG = registerWithItem(
+            "stripped_date_palm_log",
+            STRIPPED_DATE_PALM_LOG_KEY,
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).registryKey(STRIPPED_DATE_PALM_LOG_KEY)));
+
+    public static final RegistryKey<Block> STRIPPED_DATE_PALM_WOOD_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("stripped_date_palm_wood"));
+    public static final Block STRIPPED_DATE_PALM_WOOD = registerWithItem(
+            "stripped_date_palm_wood",
+            STRIPPED_DATE_PALM_WOOD_KEY,
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).registryKey(STRIPPED_DATE_PALM_WOOD_KEY)));
+
+    public static final RegistryKey<Block> DATE_PALM_PLANKS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_planks"));
+    public static final Block DATE_PALM_PLANKS = registerWithItem(
+            "date_palm_planks",
+            DATE_PALM_PLANKS_KEY,
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).registryKey(DATE_PALM_PLANKS_KEY)));
+
+    public static final RegistryKey<Block> DATE_PALM_SAPLING_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_sapling"));
+    public static final Block DATE_PALM_SAPLING = registerWithItem(
+            "date_palm_sapling",
+            DATE_PALM_SAPLING_KEY,
+            new SaplingBlock(ModSaplingGenerators.DATE_PALM, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).registryKey(DATE_PALM_SAPLING_KEY)));
+
     public static <T extends Block> T register(String name, T block) {
         return Registry.register(Registries.BLOCK, Malta.id(name), block);
     }
 
-    public static <T extends Block> T registerWithItem(String name, T block, Item.Settings settings) {
+    public static <T extends Block> T registerWithItem(String name, RegistryKey registryKey, T block, Item.Settings settings) {
         T registered = register(name, block);
-        ModItems.register(name, new BlockItem(registered, settings));
+        ModItems.register(name, new BlockItem(registered, settings.useBlockPrefixedTranslationKey().registryKey(registryKey)));
         return registered;
     }
 
-    public static <T extends Block> T registerWithItem(String name, T block) {
-        return registerWithItem(name, block, new Item.Settings());
-    }
-
-    private static DoorBlock newModDoor(BlockSetType blockSetType, Block base, boolean isTransparent, float hardness, float resistance) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .strength(hardness, resistance)
-                .pistonBehavior(PistonBehavior.DESTROY);
-
-        if (isTransparent)
-            settings.nonOpaque();
-
-        if (base.getDefaultState().isBurnable())
-            settings.burnable();
-
-        return new DoorBlock(blockSetType, settings);
-    }
-
-    private static WallBlock newModWall(Block base) {
-        return new WallBlock(AbstractBlock.Settings.copy(base).solid());
-    }
-
-    private static FenceBlock newModFence(Block base, float hardness, float resistance, BlockSoundGroup blockSoundGroup) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .strength(hardness, resistance)
-                .sounds(blockSoundGroup);
-
-        if (base.getDefaultState().isToolRequired())
-            settings.requiresTool();
-
-        if (base.getDefaultState().isBurnable())
-            settings.burnable();
-
-        return new FenceBlock(settings);
-    }
-
-    private static FenceBlock newModFence(Block base, float strength, BlockSoundGroup blockSoundGroup) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .strength(strength)
-                .sounds(blockSoundGroup);
-
-        if (base.getDefaultState().isToolRequired())
-            settings.requiresTool();
-
-        if (base.getDefaultState().isBurnable())
-            settings.burnable();
-
-        return new FenceBlock(settings);
-    }
-
-    private static FenceGateBlock newModFenceGate(WoodType woodType, Block base, float hardness, float resistance) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .solid()
-                .strength(hardness, resistance);
-
-        if (base.getDefaultState().isToolRequired())
-            settings.requiresTool();
-
-        if (base.getDefaultState().isBurnable())
-            settings.burnable();
-
-        return new FenceGateBlock(woodType, settings);
-    }
-
-    private static FenceGateBlock newModFenceGate(WoodType woodType, Block base, float strength) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .solid()
-                .strength(strength);
-
-        if (base.getDefaultState().isToolRequired())
-            settings.requiresTool();
-
-        if (base.getDefaultState().isBurnable())
-            settings.burnable();
-
-        return new FenceGateBlock(
-                woodType, settings
-        );
-    }
-
-    private static StairsBlock newModStairs(Block base) {
-        return new StairsBlock(base.getDefaultState(), AbstractBlock.Settings.copy(base));
-    }
-
-    private static SlabBlock newModSlab(Block base, float hardness, float resistance, BlockSoundGroup blockSoundGroup) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .strength(hardness, resistance)
-                .sounds(blockSoundGroup);
-
-        if (base.getDefaultState().isToolRequired())
-            settings.requiresTool();
-
-        if (base.getDefaultState().isBurnable())
-            settings.burnable();
-
-        return new SlabBlock(settings);
-    }
-
-    private static TrapdoorBlock newModTrapdoor(BlockSetType blockSetType, Block base, float hardness, float resistance) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .strength(hardness, resistance)
-                .allowsSpawning(Blocks::never);
-
-        if (base.getDefaultState().isToolRequired())
-            settings.requiresTool();
-
-        return new TrapdoorBlock(blockSetType, settings);
-    }
-
-    private static PressurePlateBlock newModPressurePlate(BlockSetType blockSetType, Block base, float hardness, float resistance) {
-        return new PressurePlateBlock(
-                blockSetType,
-                AbstractBlock.Settings.create()
-                        .mapColor(base.getDefaultMapColor())
-                        .instrument(base.getDefaultState().getInstrument())
-                        .solid()
-                        .noCollision()
-                        .strength(hardness, resistance)
-                        .pistonBehavior(PistonBehavior.DESTROY));
-    }
-
-    private static PressurePlateBlock newModPressurePlate(BlockSetType blockSetType, Block base, float strength) {
-        return new PressurePlateBlock(
-                blockSetType,
-                AbstractBlock.Settings.create()
-                        .mapColor(base.getDefaultMapColor())
-                        .instrument(base.getDefaultState().getInstrument())
-                        .solid()
-                        .noCollision()
-                        .strength(strength)
-                        .pistonBehavior(PistonBehavior.DESTROY));
-    }
-
-    private static PressurePlateBlock newModPressurePlate(BlockSetType blockSetType, Block base) {
-        return new PressurePlateBlock(
-                blockSetType,
-                AbstractBlock.Settings.create()
-                        .mapColor(base.getDefaultMapColor())
-                        .instrument(base.getDefaultState().getInstrument())
-                        .solid()
-                        .noCollision()
-                        .strength(0.5f)
-                        .pistonBehavior(PistonBehavior.DESTROY));
-    }
-
-    private static ButtonBlock newModButton(BlockSetType blockSetType, int pressTicks, Block base, float hardness, float resistance) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .noCollision()
-                .strength(hardness, resistance)
-                .pistonBehavior(PistonBehavior.DESTROY);
-
-        return new ButtonBlock(blockSetType, pressTicks, settings);
-    }
-
-    private static ButtonBlock newModButton(BlockSetType blockSetType, int pressTicks, Block base, float strength) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .noCollision()
-                .strength(strength)
-                .pistonBehavior(PistonBehavior.DESTROY);
-
-        return new ButtonBlock(blockSetType, pressTicks, settings);
-    }
-
-    private static ButtonBlock newModButton(BlockSetType blockSetType, int pressTicks, Block base) {
-        AbstractBlock.Settings settings = AbstractBlock.Settings.create()
-                .mapColor(base.getDefaultMapColor())
-                .instrument(base.getDefaultState().getInstrument())
-                .noCollision()
-                .strength(0.5f)
-                .pistonBehavior(PistonBehavior.DESTROY);
-
-        return new ButtonBlock(blockSetType, pressTicks, settings);
+    public static <T extends Block> T registerWithItem(String name, RegistryKey registryKey, T block) {
+        return registerWithItem(name, registryKey, block, new Item.Settings());
     }
 
     public static void load() {

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dough": {
+      "conditions": {
+        "items": [
+          {
+            "items": "malta:dough"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "malta:galletta"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dough"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "malta:galletta"
+    ]
+  }
+}

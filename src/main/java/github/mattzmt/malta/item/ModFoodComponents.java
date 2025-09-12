@@ -23,4 +23,23 @@ public class ModFoodComponents {
             .nutrition(1)
             .alwaysEdible()
             .build();
+
+    public static final FoodComponent DOUGH = new FoodComponent.Builder()
+            .nutrition(2)
+            .build();
+
+    public static final FoodComponent GALLETTA = new FoodComponent.Builder()
+            .nutrition(5)
+            .saturationModifier(0.1f)
+            .build();
+
+    public static final FoodComponent DATES = new FoodComponent.Builder()
+            .nutrition(3)
+            .saturationModifier(0.5f)
+            .build();
+
+    public static final FoodComponent IMQARET = new FoodComponent.Builder()
+            .nutrition(6)
+            .saturationModifier(0.5f)
+            .build();
 }

@@ -88,6 +88,16 @@ public class ModLootTableModifiers {
 
                 tableBuilder.pool(poolBuilder.build());
             }
+
+            if(LootTables.SPAWN_BONUS_CHEST.equals(key)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.15f))
+                        .with(ItemEntry.builder(ModItems.PEPPERCORNS))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2, 6)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
         });
     }
 }

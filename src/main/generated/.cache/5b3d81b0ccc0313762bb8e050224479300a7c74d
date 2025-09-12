@@ -1,0 +1,7 @@
+// 1.21.8	-999999999-01-01T00:00:00	malta/Tags for minecraft:block
+3d20f14a36aca3b9ab189604859e151c23046f32 data/minecraft/tags/block/bee_attractive.json
+d3ecf8f806e495e72269f5ad825a49250a5ff67c data/minecraft/tags/block/bee_growables.json
+d3ecf8f806e495e72269f5ad825a49250a5ff67c data/minecraft/tags/block/crops.json
+8525cbf1dc3df14fab05095877771e06291f2da5 data/minecraft/tags/block/leaves.json
+5b6151f93201aa6f0eef9df1f80908589b9ecb29 data/minecraft/tags/block/logs_that_burn.json
+5b6151f93201aa6f0eef9df1f80908589b9ecb29 data/minecraft/tags/block/mineable/axe.json

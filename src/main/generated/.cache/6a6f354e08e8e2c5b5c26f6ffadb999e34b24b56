@@ -1,2 +1,10 @@
 // 1.21.8	-999999999-01-01T00:00:00	malta/Block Loot Tables
 eff408425cb860efd0efa03ad66458192e3f5cce data/malta/loot_table/blocks/black_pepper_crop.json
+2fa9e04d84774e42548d591a7dd5a81a7c3a9214 data/malta/loot_table/blocks/date_bunch.json
+7bc7aa85906623808f242398f5546e584e57b2cc data/malta/loot_table/blocks/date_palm_leaves.json
+9681bdcf01bc2b0cc692696c82531672d7243a64 data/malta/loot_table/blocks/date_palm_log.json
+9502783d827d19328dcdb886ba2de5035d01db77 data/malta/loot_table/blocks/date_palm_planks.json
+991231ec0313b5e5ff962e5db6f3d1834e69a21c data/malta/loot_table/blocks/date_palm_sapling.json
+cba8193023ecfd00897c44108873170fb897d325 data/malta/loot_table/blocks/date_palm_wood.json
+5470d62f66598c64d8a381103e2c01b2a5b9b441 data/malta/loot_table/blocks/stripped_date_palm_log.json
+3863e23c14b1d239a2514ab955a007e025162da7 data/malta/loot_table/blocks/stripped_date_palm_wood.json

@@ -3,17 +3,33 @@ package github.mattzmt.malta;
 import github.mattzmt.malta.datagen.ModLootTableProvider;
 import github.mattzmt.malta.datagen.ModModelProvider;
 import github.mattzmt.malta.datagen.ModRecipeProvider;
+import github.mattzmt.malta.datagen.ModRegistryDataGenerator;
 import github.mattzmt.malta.datagen.lang.ModLangEnUsProvider;
+import github.mattzmt.malta.datagen.tags.ModBlockTagProvider;
+import github.mattzmt.malta.datagen.tags.ModItemTagProvider;
+import github.mattzmt.malta.world.ModConfiguredFeatures;
+import github.mattzmt.malta.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 
 public class MaltaDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(ModLangEnUsProvider::new);
+        pack.addProvider(ModBlockTagProvider::new);
+        pack.addProvider(ModItemTagProvider::new);
         pack.addProvider(ModLootTableProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModRecipeProvider::new);
+        pack.addProvider(ModRegistryDataGenerator::new);
 	}
+
+    @Override
+    public void buildRegistry(RegistryBuilder registryBuilder) {
+        registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+    }
 }

@@ -32,7 +32,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerFoodCookingRecipe("smelting", RecipeSerializer.SMELTING, SmeltingRecipe::new, 200, Items.MILK_BUCKET, ModItems.CURDLED_MILK_BUCKET, 0.35f);
                 offerFoodCookingRecipe("smoking", RecipeSerializer.SMOKING, SmokingRecipe::new, 100, Items.MILK_BUCKET, ModItems.CURDLED_MILK_BUCKET, 0.35f);
 
-                createShapeless(RecipeCategory.FOOD, ModItems.GBEJNA, 4)
+                createShapeless(RecipeCategory.FOOD, ModItems.GBEJNA, 2)
                         .input(ModItems.CURDLED_MILK_BUCKET)
                         .criterion(hasItem(ModItems.CURDLED_MILK_BUCKET), conditionsFromItem(ModItems.CURDLED_MILK_BUCKET))
                         .offerTo(recipeExporter, "gbejna");
@@ -43,6 +43,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.GBEJNA), conditionsFromItem(ModItems.GBEJNA))
                         .criterion(hasItem(ModItems.PEPPERCORNS), conditionsFromItem(ModItems.PEPPERCORNS))
                         .offerTo(recipeExporter, "peppered_gbejna");
+
+                createShapeless(RecipeCategory.FOOD, ModItems.DOUGH, 2)
+                        .input(Items.WHEAT, 3)
+                        .input(Items.WATER_BUCKET)
+                        .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
+                        .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                        .offerTo(recipeExporter, "dough");
+
+                createShaped(RecipeCategory.FOOD, ModItems.GALLETTA, 4)
+                        .input('D', ModItems.DOUGH)
+                        .pattern("DD")
+                        .criterion(hasItem(ModItems.DOUGH), conditionsFromItem(ModItems.DOUGH))
+                        .offerTo(recipeExporter, "galletta");
+
+                createShapeless(RecipeCategory.FOOD, ModItems.IMQARET, 2)
+                        .input(ModItems.DOUGH)
+                        .input(ModItems.DATES, 2)
+                        .criterion(hasItem(ModItems.DOUGH), conditionsFromItem(ModItems.DOUGH))
+                        .criterion(hasItem(ModItems.DATES), conditionsFromItem(ModItems.DATES))
+                        .offerTo(recipeExporter, "imqaret");
             }
         };
     }

@@ -14,6 +14,9 @@ public class MaltaClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         LOGGER.info("Malta mod initialised on the client");
+
         BlockRenderLayerMap.putBlock(ModBlocks.BLACK_PEPPER_CROP, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.DATE_BUNCH, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.DATE_PALM_SAPLING, BlockRenderLayer.CUTOUT);
     }
 }

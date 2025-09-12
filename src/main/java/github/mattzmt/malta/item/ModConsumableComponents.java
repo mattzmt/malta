@@ -17,21 +17,39 @@ public class ModConsumableComponents {
             .build();
 
     public static final ConsumableComponent GBEJNA = food()
-            .consumeSeconds(1f)
+            .consumeSeconds(1)
             .consumeEffect(new ApplyEffectsConsumeEffect(List.of(
-                    new StatusEffectInstance(StatusEffects.REGENERATION, 5 * 20, 0))))
+                    new StatusEffectInstance(StatusEffects.REGENERATION, 5 * 20))))
             .build();
 
     public static final ConsumableComponent PEPPERED_GBEJNA = food()
-            .consumeSeconds(1f)
+            .consumeSeconds(1)
             .consumeEffect(new ApplyEffectsConsumeEffect(List.of(
-                    new StatusEffectInstance(StatusEffects.REGENERATION, 5 * 20, 0),
-                    new StatusEffectInstance(StatusEffects.HASTE, 10 * 20, 0))))
+                    new StatusEffectInstance(StatusEffects.REGENERATION, 5 * 20),
+                    new StatusEffectInstance(StatusEffects.HASTE, 10 * 20))))
             .build();
 
     public static final ConsumableComponent PEPPERCORNS = food()
             .consumeSeconds(0.4f)
             .consumeEffect(new ApplyEffectsConsumeEffect(List.of(
-                    new StatusEffectInstance(StatusEffects.HASTE, 10 * 20, 0))))
+                    new StatusEffectInstance(StatusEffects.HASTE, 10 * 20))))
+            .build();
+
+    public static final ConsumableComponent DOUGH = food()
+            .consumeSeconds(2)
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.HUNGER, 20 * 20), 0.5f))
+            .build();
+
+    public static final ConsumableComponent GALLETTA = food()
+            .consumeSeconds(1)
+            .build();
+
+    public static final ConsumableComponent DATES = food()
+            .consumeSeconds(0.8f)
+            .build();
+
+    public static final ConsumableComponent IMQARET = food()
+            .consumeSeconds(1)
             .build();
 }

@@ -36,8 +36,20 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
         translationBuilder.add(ModItems.GBEJNA, "Ġbejna");
         translationBuilder.add(ModItems.PEPPERED_GBEJNA, "Peppered Ġbejna");
         translationBuilder.add(ModItems.PEPPERCORNS, "Peppercorns");
+        translationBuilder.add(ModItems.DOUGH, "Dough");
+        translationBuilder.add(ModItems.GALLETTA, "Galletta");
+        translationBuilder.add(ModItems.DATES, "Dates");
+        translationBuilder.add(ModItems.IMQARET, "Imqaret");
 
         //BLOCKS
         translationBuilder.add(ModBlocks.BLACK_PEPPER_CROP, "Black Pepper Crop");
+        translationBuilder.add(ModBlocks.DATE_BUNCH, "Date Bunch");
+        translationBuilder.add(ModBlocks.DATE_PALM_LEAVES, "Date Palm Leaves");
+        translationBuilder.add(ModBlocks.DATE_PALM_LOG, "Date Palm Log");
+        translationBuilder.add(ModBlocks.DATE_PALM_WOOD, "Date Palm Wood");
+        translationBuilder.add(ModBlocks.STRIPPED_DATE_PALM_LOG, "Stripped Date Palm Log");
+        translationBuilder.add(ModBlocks.STRIPPED_DATE_PALM_WOOD, "Stripped Date Palm Wood");
+        translationBuilder.add(ModBlocks.DATE_PALM_PLANKS, "Date Palm Planks");
+        translationBuilder.add(ModBlocks.DATE_PALM_SAPLING, "Date Palm Sapling");
     }
 }
