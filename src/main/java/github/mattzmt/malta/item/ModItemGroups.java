@@ -19,17 +19,22 @@ public class ModItemGroups {
                 entries.add(ModItems.PEPPERED_GBEJNA);
                 entries.add(ModItems.PEPPERCORNS);
                 entries.add(ModItems.DOUGH);
+                entries.add(ModItems.DATES);
+                entries.add(ModItems.IMQARET);
                 entries.add(ModItems.GALLETTA);
+                entries.add(ModItems.SALMON_DIP);
+                entries.add(ModItems.SALMON_DIPPED_GALLETTA);
+                entries.add(ModItems.BIGILLA);
+                entries.add(ModItems.BIGILLA_DIPPED_GALLETTA);
 
-                entries.add(ModBlocks.DATE_PALM_LEAVES);
                 entries.add(ModBlocks.DATE_BUNCH);
+                entries.add(ModBlocks.DATE_PALM_LEAVES);
                 entries.add(ModBlocks.DATE_PALM_LOG);
                 entries.add(ModBlocks.DATE_PALM_WOOD);
                 entries.add(ModBlocks.STRIPPED_DATE_PALM_LOG);
                 entries.add(ModBlocks.STRIPPED_DATE_PALM_WOOD);
                 entries.add(ModBlocks.DATE_PALM_PLANKS);
                 entries.add(ModBlocks.DATE_PALM_SAPLING.asItem());
-                entries.add(ModItems.DATES);
             }).build()
     );
 

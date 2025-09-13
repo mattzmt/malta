@@ -8,7 +8,6 @@ import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.particle.ParticleEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -16,7 +15,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 
 public class ModBlocks {
-    public static final RegistryKey<Block> BLACK_PEPPER_CROP_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("black_pepper_crop"));
+    private static final RegistryKey<Block> BLACK_PEPPER_CROP_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("black_pepper_crop"));
     public static final Block BLACK_PEPPER_CROP = register(
             "black_pepper_crop",
             new BlackPepperCropBlock(AbstractBlock.Settings.create()
@@ -28,7 +27,7 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .registryKey(BLACK_PEPPER_CROP_KEY)));
 
-    public static final RegistryKey<Block> DATE_BUNCH_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_bunch"));
+    private static final RegistryKey<Block> DATE_BUNCH_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_bunch"));
     public static final Block DATE_BUNCH = registerWithItem(
             "date_bunch",
             DATE_BUNCH_KEY,
@@ -39,7 +38,7 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
                     .registryKey(DATE_BUNCH_KEY)));
 
-    public static final RegistryKey<Block> DATE_PALM_LEAVES_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_leaves"));
+    private static final RegistryKey<Block> DATE_PALM_LEAVES_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_leaves"));
     public static final Block DATE_PALM_LEAVES = registerWithItem(
             "date_palm_leaves",
             DATE_PALM_LEAVES_KEY,
@@ -57,37 +56,37 @@ public class ModBlocks {
                     .solidBlock(Blocks::never)
                     .registryKey(DATE_PALM_LEAVES_KEY)));
 
-    public static final RegistryKey<Block> DATE_PALM_LOG_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_log"));
+    private static final RegistryKey<Block> DATE_PALM_LOG_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_log"));
     public static final Block DATE_PALM_LOG = registerWithItem(
             "date_palm_log",
             DATE_PALM_LOG_KEY,
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).registryKey(DATE_PALM_LOG_KEY)));
 
-    public static final RegistryKey<Block> DATE_PALM_WOOD_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_wood"));
+    private static final RegistryKey<Block> DATE_PALM_WOOD_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_wood"));
     public static final Block DATE_PALM_WOOD = registerWithItem(
             "date_palm_wood",
             DATE_PALM_WOOD_KEY,
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).registryKey(DATE_PALM_WOOD_KEY)));
 
-    public static final RegistryKey<Block> STRIPPED_DATE_PALM_LOG_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("stripped_date_palm_log"));
+    private static final RegistryKey<Block> STRIPPED_DATE_PALM_LOG_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("stripped_date_palm_log"));
     public static final Block STRIPPED_DATE_PALM_LOG = registerWithItem(
             "stripped_date_palm_log",
             STRIPPED_DATE_PALM_LOG_KEY,
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).registryKey(STRIPPED_DATE_PALM_LOG_KEY)));
 
-    public static final RegistryKey<Block> STRIPPED_DATE_PALM_WOOD_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("stripped_date_palm_wood"));
+    private static final RegistryKey<Block> STRIPPED_DATE_PALM_WOOD_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("stripped_date_palm_wood"));
     public static final Block STRIPPED_DATE_PALM_WOOD = registerWithItem(
             "stripped_date_palm_wood",
             STRIPPED_DATE_PALM_WOOD_KEY,
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).registryKey(STRIPPED_DATE_PALM_WOOD_KEY)));
 
-    public static final RegistryKey<Block> DATE_PALM_PLANKS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_planks"));
+    private static final RegistryKey<Block> DATE_PALM_PLANKS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_planks"));
     public static final Block DATE_PALM_PLANKS = registerWithItem(
             "date_palm_planks",
             DATE_PALM_PLANKS_KEY,
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).registryKey(DATE_PALM_PLANKS_KEY)));
 
-    public static final RegistryKey<Block> DATE_PALM_SAPLING_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_sapling"));
+    private static final RegistryKey<Block> DATE_PALM_SAPLING_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("date_palm_sapling"));
     public static final Block DATE_PALM_SAPLING = registerWithItem(
             "date_palm_sapling",
             DATE_PALM_SAPLING_KEY,

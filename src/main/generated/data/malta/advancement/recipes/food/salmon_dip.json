@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bowl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bowl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cooked_salmon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cooked_salmon"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_curdled_milk_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": "malta:curdled_milk_bucket"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "malta:salmon_dip"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_curdled_milk_bucket",
+      "has_cooked_salmon",
+      "has_bowl"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "malta:salmon_dip"
+    ]
+  }
+}

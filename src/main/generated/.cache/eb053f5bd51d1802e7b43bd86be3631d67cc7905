@@ -1,3 +1,13 @@
 // 1.21.8	-999999999-01-01T00:00:00	malta/Tags for minecraft:item
+d9726abbf946f2f75b1865ca29fc6d36a984c331 data/minecraft/tags/item/bee_food.json
+490274a38ab9da516bad01df7549e3db328094a4 data/minecraft/tags/item/chicken_food.json
+5b6151f93201aa6f0eef9df1f80908589b9ecb29 data/minecraft/tags/item/completes_find_tree_tutorial.json
+b1d43e3ed9ae017bb6b5e4206b43ef16416e28b3 data/minecraft/tags/item/creeper_igniters.json
+8525cbf1dc3df14fab05095877771e06291f2da5 data/minecraft/tags/item/leaves.json
+5b6151f93201aa6f0eef9df1f80908589b9ecb29 data/minecraft/tags/item/logs.json
 5b6151f93201aa6f0eef9df1f80908589b9ecb29 data/minecraft/tags/item/logs_that_burn.json
+ffea40bed9ce46d20b7df69ef0f0696d02cf0990 data/minecraft/tags/item/parrot_food.json
 6d4baea1195c9a94d00cc6343cd6e96cbe703ff4 data/minecraft/tags/item/planks.json
+683b04313054aefeeaf09827a2f53dd60a21f1e0 data/minecraft/tags/item/saplings.json
+399159025f5b64fcd2b624f2a4ae446ad0fd44e4 data/minecraft/tags/item/villager_picks_up.json
+490274a38ab9da516bad01df7549e3db328094a4 data/minecraft/tags/item/villager_plantable_seeds.json

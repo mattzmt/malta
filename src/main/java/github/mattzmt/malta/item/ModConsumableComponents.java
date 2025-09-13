@@ -41,15 +41,31 @@ public class ModConsumableComponents {
                     new StatusEffectInstance(StatusEffects.HUNGER, 20 * 20), 0.5f))
             .build();
 
-    public static final ConsumableComponent GALLETTA = food()
-            .consumeSeconds(1)
-            .build();
-
     public static final ConsumableComponent DATES = food()
             .consumeSeconds(0.8f)
             .build();
 
     public static final ConsumableComponent IMQARET = food()
             .consumeSeconds(1)
+            .build();
+
+    public static final ConsumableComponent OLIVE = food()
+            .consumeSeconds(0.8f)
+            .build();
+
+    public static final ConsumableComponent GALLETTA = food()
+            .consumeSeconds(1)
+            .build();
+
+    public static final ConsumableComponent SALMON_DIPPED_GALLETTA = food()
+            .consumeSeconds(1)
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.WATER_BREATHING, 5 * 20)))
+            .build();
+
+    public static final ConsumableComponent BIGILLA_DIPPED_GALLETTA = food()
+            .consumeSeconds(1)
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.ABSORPTION, 15 * 20)))
             .build();
 }

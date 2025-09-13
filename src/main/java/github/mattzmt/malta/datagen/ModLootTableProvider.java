@@ -5,13 +5,8 @@ import github.mattzmt.malta.block.custom.BlackPepperCropBlock;
 import github.mattzmt.malta.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.Items;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.entry.LootPoolEntry;
-import net.minecraft.loot.function.SetCountLootFunction;
-import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -28,15 +23,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 .properties(StatePredicate.Builder.create().exactMatch(BlackPepperCropBlock.AGE, BlackPepperCropBlock.MAX_AGE));
         this.addDrop(ModBlocks.BLACK_PEPPER_CROP, this.cropDrops(ModBlocks.BLACK_PEPPER_CROP, ModItems.PEPPERCORNS, ModItems.PEPPERCORNS, builder));
 
+        addDrop(ModBlocks.DATE_BUNCH, dropsWithShears(ModBlocks.DATE_BUNCH, applyExplosionDecay(ModBlocks.DATE_BUNCH, ItemEntry.builder(ModItems.DATES))));
+        addDrop(ModBlocks.DATE_PALM_LEAVES, leavesDrops(ModBlocks.DATE_PALM_LEAVES, ModBlocks.DATE_PALM_SAPLING, 0.1f));
         addDrop(ModBlocks.DATE_PALM_LOG);
         addDrop(ModBlocks.DATE_PALM_WOOD);
         addDrop(ModBlocks.STRIPPED_DATE_PALM_LOG);
         addDrop(ModBlocks.STRIPPED_DATE_PALM_WOOD);
         addDrop(ModBlocks.DATE_PALM_PLANKS);
         addDrop(ModBlocks.DATE_PALM_SAPLING);
-
-        addDrop(ModBlocks.DATE_BUNCH, dropsWithShears(ModBlocks.DATE_BUNCH, (LootPoolEntry.Builder<?>) applyExplosionDecay(ModBlocks.DATE_BUNCH, ItemEntry.builder(ModItems.DATES))));
-
-        addDrop(ModBlocks.DATE_PALM_LEAVES, leavesDrops(ModBlocks.DATE_PALM_LEAVES, ModBlocks.DATE_PALM_SAPLING, 0.2f));
     }
 }

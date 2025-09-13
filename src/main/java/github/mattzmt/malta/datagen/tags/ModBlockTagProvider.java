@@ -1,7 +1,6 @@
 package github.mattzmt.malta.datagen.tags;
 
 import github.mattzmt.malta.block.ModBlocks;
-import github.mattzmt.malta.block.custom.BlackPepperCropBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -25,19 +24,40 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(BlockTags.CROPS)
                 .add(ModBlocks.BLACK_PEPPER_CROP);
 
-        valueLookupBuilder(BlockTags.LEAVES)
-                .add(ModBlocks.DATE_PALM_LEAVES);
+        valueLookupBuilder(BlockTags.BEE_GROWABLES)
+                .add(ModBlocks.BLACK_PEPPER_CROP);
+
+        valueLookupBuilder(BlockTags.MAINTAINS_FARMLAND)
+                .add(ModBlocks.BLACK_PEPPER_CROP);
 
         valueLookupBuilder(BlockTags.BEE_ATTRACTIVE)
                 .add(ModBlocks.DATE_BUNCH);
 
-        valueLookupBuilder(BlockTags.BEE_GROWABLES)
-                .add(ModBlocks.BLACK_PEPPER_CROP);
+        valueLookupBuilder(BlockTags.LEAVES)
+                .add(ModBlocks.DATE_PALM_LEAVES);
 
         valueLookupBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.DATE_PALM_LOG)
                 .add(ModBlocks.DATE_PALM_WOOD)
                 .add(ModBlocks.STRIPPED_DATE_PALM_LOG)
                 .add(ModBlocks.STRIPPED_DATE_PALM_WOOD);
+
+        valueLookupBuilder(BlockTags.LOGS)
+                .add(ModBlocks.DATE_PALM_LOG)
+                .add(ModBlocks.DATE_PALM_WOOD)
+                .add(ModBlocks.STRIPPED_DATE_PALM_LOG)
+                .add(ModBlocks.STRIPPED_DATE_PALM_WOOD);
+
+        valueLookupBuilder(BlockTags.COMPLETES_FIND_TREE_TUTORIAL)
+                .add(ModBlocks.DATE_PALM_LOG)
+                .add(ModBlocks.DATE_PALM_WOOD)
+                .add(ModBlocks.STRIPPED_DATE_PALM_LOG)
+                .add(ModBlocks.STRIPPED_DATE_PALM_WOOD);
+
+        valueLookupBuilder(BlockTags.PLANKS)
+                .add(ModBlocks.DATE_PALM_PLANKS);
+
+        valueLookupBuilder(BlockTags.SAPLINGS)
+                .add(ModBlocks.DATE_PALM_SAPLING);
     }
 }

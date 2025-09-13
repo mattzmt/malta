@@ -8,6 +8,8 @@
   "block.malta.date_palm_wood": "Date Palm Wood",
   "block.malta.stripped_date_palm_log": "Stripped Date Palm Log",
   "block.malta.stripped_date_palm_wood": "Stripped Date Palm Wood",
+  "item.malta.bigilla": "Bigilla",
+  "item.malta.bigilla_dipped_galletta": "Bigilla dipped Galletta",
   "item.malta.curdled_milk_bucket": "Curdled Milk Bucket",
   "item.malta.dates": "Dates",
   "item.malta.dough": "Dough",
@@ -16,5 +18,7 @@
   "item.malta.imqaret": "Imqaret",
   "item.malta.peppercorns": "Peppercorns",
   "item.malta.peppered_gbejna": "Peppered Ġbejna",
+  "item.malta.salmon_dip": "Smoked Salmon Dip",
+  "item.malta.salmon_dipped_galletta": "Smoked Salmon dipped Galletta",
   "itemGroup.malta.nev_group": "Malta"
 }

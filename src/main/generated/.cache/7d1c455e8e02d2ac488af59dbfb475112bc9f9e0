@@ -1,4 +1,5 @@
 // 1.21.8	-999999999-01-01T00:00:00	malta/ModRecipeProvider
+490ee4f2dc963d4b0a24775a5d07b69096d4e9a1 data/malta/advancement/recipes/food/bigilla_dipped_galletta.json
 5427265c396f54cf48e4793ade18613d5cad854a data/malta/advancement/recipes/food/curdled_milk_bucket_from_smelting.json
 bc867d794d56d49cf1db190e6e6f8a089db93293 data/malta/advancement/recipes/food/curdled_milk_bucket_from_smoking.json
 cb65c7d0669f7e353a67c985bc0f649af90f2592 data/malta/advancement/recipes/food/dough.json
@@ -6,6 +7,9 @@ d6be2e4872c4fa8f1069d5800e212f919a7bd5f6 data/malta/advancement/recipes/food/gal
 8050abab0115899925a9fd12c5db7a96e52c2150 data/malta/advancement/recipes/food/gbejna.json
 0ecd425acdc49c7938b430d229df2a056aad440c data/malta/advancement/recipes/food/imqaret.json
 ef9f701439b0a658fe3794eaa9a72a2f90807e49 data/malta/advancement/recipes/food/peppered_gbejna.json
+81dae2df0df3f826059262c7022feed60d931c0f data/malta/advancement/recipes/food/salmon_dip.json
+8220b27a8073603f174e861fe424def5daaf6010 data/malta/advancement/recipes/food/salmon_dipped_galletta.json
+7eb4ef2f4b7f1caa0e2d5e1aa036007abd761e7e data/malta/recipe/bigilla_dipped_galletta.json
 ce7bbe9e0c03e545e041363cb20673405bd0ae80 data/malta/recipe/curdled_milk_bucket_from_smelting.json
 6f52093c1b665412c0943d9e314e0c988e6f052d data/malta/recipe/curdled_milk_bucket_from_smoking.json
 68f2634eb7d35164e28f39cfdb2b81bad9785009 data/malta/recipe/dough.json
@@ -13,3 +17,5 @@ f368a7f88b7b04559c557d6a3eaf814942c05761 data/malta/recipe/galletta.json
 3ef37dc893d17dec96c7cea899d41a661f744121 data/malta/recipe/gbejna.json
 91a25695d224aa77a6c8c5678954d761e29af1aa data/malta/recipe/imqaret.json
 5c9e1fd4f2c4d3ba8c1ef24c74588e24d4614d41 data/malta/recipe/peppered_gbejna.json
+ffe7e879da3323b7ff82e651986724a1231f7f19 data/malta/recipe/salmon_dip.json
+34009f413dd45cd2f7177845c3ca06067f99093d data/malta/recipe/salmon_dipped_galletta.json

@@ -5,7 +5,6 @@ import github.mattzmt.malta.block.custom.BlackPepperCropBlock;
 import github.mattzmt.malta.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
@@ -32,7 +31,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .log(ModBlocks.STRIPPED_DATE_PALM_LOG)
                 .wood(ModBlocks.STRIPPED_DATE_PALM_WOOD);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DATE_PALM_PLANKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DATE_PALM_PLANKS);
 
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.DATE_PALM_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
     }
@@ -43,9 +42,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GBEJNA, Models.GENERATED);
         itemModelGenerator.register(ModItems.PEPPERED_GBEJNA, Models.GENERATED);
         itemModelGenerator.register(ModItems.DOUGH, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GALLETTA, Models.GENERATED);
         itemModelGenerator.register(ModBlocks.DATE_PALM_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModItems.DATES, Models.GENERATED);
         itemModelGenerator.register(ModItems.IMQARET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GALLETTA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SALMON_DIP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SALMON_DIPPED_GALLETTA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BIGILLA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BIGILLA_DIPPED_GALLETTA, Models.GENERATED);
     }
 }

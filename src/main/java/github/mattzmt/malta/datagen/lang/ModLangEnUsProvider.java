@@ -37,9 +37,13 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PEPPERED_GBEJNA, "Peppered Ġbejna");
         translationBuilder.add(ModItems.PEPPERCORNS, "Peppercorns");
         translationBuilder.add(ModItems.DOUGH, "Dough");
-        translationBuilder.add(ModItems.GALLETTA, "Galletta");
         translationBuilder.add(ModItems.DATES, "Dates");
         translationBuilder.add(ModItems.IMQARET, "Imqaret");
+        translationBuilder.add(ModItems.GALLETTA, "Galletta");
+        translationBuilder.add(ModItems.SALMON_DIP, "Smoked Salmon Dip");
+        translationBuilder.add(ModItems.SALMON_DIPPED_GALLETTA, "Smoked Salmon dipped Galletta");
+        translationBuilder.add(ModItems.BIGILLA, "Bigilla");
+        translationBuilder.add(ModItems.BIGILLA_DIPPED_GALLETTA, "Bigilla dipped Galletta");
 
         //BLOCKS
         translationBuilder.add(ModBlocks.BLACK_PEPPER_CROP, "Black Pepper Crop");

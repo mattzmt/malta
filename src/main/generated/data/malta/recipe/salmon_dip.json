@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "malta:curdled_milk_bucket",
+    "minecraft:cooked_salmon",
+    "minecraft:cooked_salmon",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "count": 1,
+    "id": "malta:salmon_dip"
+  }
+}
