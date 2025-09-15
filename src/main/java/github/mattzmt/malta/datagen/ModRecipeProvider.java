@@ -1,5 +1,6 @@
 package github.mattzmt.malta.datagen;
 
+import github.mattzmt.malta.block.ModBlocks;
 import github.mattzmt.malta.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -46,18 +47,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
                         .offerTo(recipeExporter, "dough");
 
+                createShapeless(RecipeCategory.FOOD, ModItems.MAQRUT, 2)
+                        .input(ModItems.DOUGH)
+                        .input(ModItems.DATES, 2)
+                        .criterion(hasItem(ModItems.DOUGH), conditionsFromItem(ModItems.DOUGH))
+                        .criterion(hasItem(ModItems.DATES), conditionsFromItem(ModItems.DATES))
+                        .offerTo(recipeExporter, "maqrut");
+
                 createShaped(RecipeCategory.FOOD, ModItems.GALLETTA, 4)
                         .input('D', ModItems.DOUGH)
                         .pattern("DD")
                         .criterion(hasItem(ModItems.DOUGH), conditionsFromItem(ModItems.DOUGH))
                         .offerTo(recipeExporter, "galletta");
-
-                createShapeless(RecipeCategory.FOOD, ModItems.IMQARET, 2)
-                        .input(ModItems.DOUGH)
-                        .input(ModItems.DATES, 2)
-                        .criterion(hasItem(ModItems.DOUGH), conditionsFromItem(ModItems.DOUGH))
-                        .criterion(hasItem(ModItems.DATES), conditionsFromItem(ModItems.DATES))
-                        .offerTo(recipeExporter, "imqaret");
 
                 createShapeless(RecipeCategory.FOOD, ModItems.SALMON_DIP)
                         .input(ModItems.CURDLED_MILK_BUCKET)
@@ -74,11 +75,90 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.SALMON_DIP), conditionsFromItem(ModItems.SALMON_DIP))
                         .offerTo(recipeExporter, "salmon_dipped_galletta");
 
+                createShapeless(RecipeCategory.FOOD, ModItems.BIGILLA)
+                        .input(ModItems.PEPPERCORNS)
+                        .input(Items.WHEAT_SEEDS)
+                        .input(Items.POTATO)
+                        .input(Items.BOWL)
+                        .criterion(hasItem(ModItems.PEPPERCORNS), conditionsFromItem(ModItems.PEPPERCORNS))
+                        .criterion(hasItem(Items.WHEAT_SEEDS), conditionsFromItem(Items.WHEAT_SEEDS))
+                        .criterion(hasItem(Items.POTATO), conditionsFromItem(Items.POTATO))
+                        .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
+                        .offerTo(recipeExporter, "bigilla");
+
                 createShapeless(RecipeCategory.FOOD, ModItems.BIGILLA_DIPPED_GALLETTA, 2)
                         .input(ModItems.BIGILLA)
                         .input(ModItems.GALLETTA, 2)
                         .criterion(hasItem(ModItems.BIGILLA), conditionsFromItem(ModItems.BIGILLA))
                         .offerTo(recipeExporter, "bigilla_dipped_galletta");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DATE_PALM_WOOD, 3)
+                        .input('L', ModBlocks.DATE_PALM_LOG)
+                        .pattern("LL")
+                        .pattern("LL")
+                        .criterion(hasItem(ModBlocks.DATE_PALM_LOG), conditionsFromItem(ModBlocks.DATE_PALM_LOG))
+                        .offerTo(recipeExporter, "date_palm_wood");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_DATE_PALM_WOOD, 3)
+                        .input('L', ModBlocks.STRIPPED_DATE_PALM_LOG)
+                        .pattern("LL")
+                        .pattern("LL")
+                        .criterion(hasItem(ModBlocks.STRIPPED_DATE_PALM_LOG), conditionsFromItem(ModBlocks.STRIPPED_DATE_PALM_LOG))
+                        .offerTo(recipeExporter, "stripped_date_palm_wood");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DATE_PALM_PLANKS, 4)
+                        .input(ModBlocks.DATE_PALM_LOG)
+                        .criterion(hasItem(ModBlocks.DATE_PALM_LOG), conditionsFromItem(ModBlocks.DATE_PALM_LOG))
+                        .offerTo(recipeExporter, "date_palm_planks_from_log");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DATE_PALM_PLANKS, 4)
+                        .input(ModBlocks.STRIPPED_DATE_PALM_LOG)
+                        .criterion(hasItem(ModBlocks.STRIPPED_DATE_PALM_LOG), conditionsFromItem(ModBlocks.STRIPPED_DATE_PALM_LOG))
+                        .offerTo(recipeExporter, "date_palm_planks_from_stripped_log");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DATE_PALM_PLANKS, 4)
+                        .input(ModBlocks.DATE_PALM_WOOD)
+                        .criterion(hasItem(ModBlocks.DATE_PALM_WOOD), conditionsFromItem(ModBlocks.DATE_PALM_WOOD))
+                        .offerTo(recipeExporter, "date_palm_planks_from_wood");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DATE_PALM_PLANKS, 4)
+                        .input(ModBlocks.STRIPPED_DATE_PALM_WOOD)
+                        .criterion(hasItem(ModBlocks.STRIPPED_DATE_PALM_WOOD), conditionsFromItem(ModBlocks.STRIPPED_DATE_PALM_WOOD))
+                        .offerTo(recipeExporter, "date_palm_planks_from_stripped_wood");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_WOOD, 3)
+                        .input('L', ModBlocks.OLIVE_LOG)
+                        .pattern("LL")
+                        .pattern("LL")
+                        .criterion(hasItem(ModBlocks.OLIVE_LOG), conditionsFromItem(ModBlocks.OLIVE_LOG))
+                        .offerTo(recipeExporter, "olive_wood");
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_OLIVE_WOOD, 3)
+                        .input('L', ModBlocks.STRIPPED_OLIVE_LOG)
+                        .pattern("LL")
+                        .pattern("LL")
+                        .criterion(hasItem(ModBlocks.STRIPPED_OLIVE_LOG), conditionsFromItem(ModBlocks.STRIPPED_OLIVE_LOG))
+                        .offerTo(recipeExporter, "stripped_olive_wood");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
+                        .input(ModBlocks.OLIVE_LOG)
+                        .criterion(hasItem(ModBlocks.OLIVE_LOG), conditionsFromItem(ModBlocks.OLIVE_LOG))
+                        .offerTo(recipeExporter, "olive_planks_from_log");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
+                        .input(ModBlocks.STRIPPED_OLIVE_LOG)
+                        .criterion(hasItem(ModBlocks.STRIPPED_OLIVE_LOG), conditionsFromItem(ModBlocks.STRIPPED_OLIVE_LOG))
+                        .offerTo(recipeExporter, "olive_planks_from_stripped_log");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
+                        .input(ModBlocks.OLIVE_WOOD)
+                        .criterion(hasItem(ModBlocks.OLIVE_WOOD), conditionsFromItem(ModBlocks.OLIVE_WOOD))
+                        .offerTo(recipeExporter, "olive_planks_from_wood");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.OLIVE_PLANKS, 4)
+                        .input(ModBlocks.STRIPPED_OLIVE_WOOD)
+                        .criterion(hasItem(ModBlocks.STRIPPED_OLIVE_WOOD), conditionsFromItem(ModBlocks.STRIPPED_OLIVE_WOOD))
+                        .offerTo(recipeExporter, "olive_planks_from_stripped_wood");
             }
         };
     }

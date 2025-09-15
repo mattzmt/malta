@@ -60,20 +60,19 @@ public class ModItems {
                     .food(ModFoodComponents.DATES, ModConsumableComponents.DATES)
                     .registryKey(DATES_KEY)));
 
-    private static final RegistryKey<Item> IMQARET_KEY = RegistryKey.of(RegistryKeys.ITEM, Malta.id("imqaret"));
-    public static final Item IMQARET = register(
-            "imqaret",
+    private static final RegistryKey<Item> MAQRUT_KEY = RegistryKey.of(RegistryKeys.ITEM, Malta.id("maqrut"));
+    public static final Item MAQRUT = register(
+            "maqrut",
             new Item(new Item.Settings()
-                    .food(ModFoodComponents.IMQARET, ModConsumableComponents.IMQARET)
+                    .food(ModFoodComponents.MAQRUT, ModConsumableComponents.MAQRUT)
                     .maxCount(32)
-                    .registryKey(IMQARET_KEY)));
+                    .registryKey(MAQRUT_KEY)));
 
     private static final RegistryKey<Item> OLIVE_KEY = RegistryKey.of(RegistryKeys.ITEM, Malta.id("olive"));
     public static final Item OLIVE = register(
             "olive",
             new Item(new Item.Settings()
                     .food(ModFoodComponents.OLIVE, ModConsumableComponents.OLIVE)
-                    .maxCount(32)
                     .registryKey(OLIVE_KEY)));
 
     private static final RegistryKey<Item> GALLETTA_KEY = RegistryKey.of(RegistryKeys.ITEM, Malta.id("galletta"));

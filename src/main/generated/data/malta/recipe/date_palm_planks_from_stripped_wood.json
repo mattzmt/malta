@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "malta:stripped_date_palm_wood"
+  ],
+  "result": {
+    "count": 4,
+    "id": "malta:date_palm_planks"
+  }
+}

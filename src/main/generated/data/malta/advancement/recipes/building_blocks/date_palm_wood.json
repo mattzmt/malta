@@ -1,21 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dates": {
+    "has_date_palm_log": {
       "conditions": {
         "items": [
           {
-            "items": "malta:dates"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_dough": {
-      "conditions": {
-        "items": [
-          {
-            "items": "malta:dough"
+            "items": "malta:date_palm_log"
           }
         ]
       },
@@ -23,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "malta:imqaret"
+        "recipe": "malta:date_palm_wood"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_dough",
-      "has_dates"
+      "has_date_palm_log"
     ]
   ],
   "rewards": {
     "recipes": [
-      "malta:imqaret"
+      "malta:date_palm_wood"
     ]
   }
 }

@@ -21,30 +21,40 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerTintableCross(ModBlocks.DATE_BUNCH, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
-        blockStateModelGenerator.registerSingleton(ModBlocks.DATE_PALM_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintedBlockAndItem(ModBlocks.DATE_PALM_LEAVES, TexturedModel.LEAVES, 0xA7B245);
+        blockStateModelGenerator.registerTintedBlockAndItem(ModBlocks.OLIVE_LEAVES, TexturedModel.LEAVES, 0x8EA657);
 
         blockStateModelGenerator.createLogTexturePool(ModBlocks.DATE_PALM_LOG)
                 .log(ModBlocks.DATE_PALM_LOG)
                 .wood(ModBlocks.DATE_PALM_WOOD);
-
         blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_DATE_PALM_LOG)
                 .log(ModBlocks.STRIPPED_DATE_PALM_LOG)
                 .wood(ModBlocks.STRIPPED_DATE_PALM_WOOD);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.OLIVE_LOG)
+                .log(ModBlocks.OLIVE_LOG)
+                .wood(ModBlocks.OLIVE_WOOD);
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_OLIVE_LOG)
+                .log(ModBlocks.STRIPPED_OLIVE_LOG)
+                .wood(ModBlocks.STRIPPED_OLIVE_WOOD);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DATE_PALM_PLANKS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.OLIVE_PLANKS);
 
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.DATE_PALM_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.OLIVE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModBlocks.DATE_PALM_SAPLING.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.OLIVE_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModItems.CURDLED_MILK_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.GBEJNA, Models.GENERATED);
         itemModelGenerator.register(ModItems.PEPPERED_GBEJNA, Models.GENERATED);
         itemModelGenerator.register(ModItems.DOUGH, Models.GENERATED);
-        itemModelGenerator.register(ModBlocks.DATE_PALM_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModItems.DATES, Models.GENERATED);
-        itemModelGenerator.register(ModItems.IMQARET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAQRUT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.OLIVE, Models.GENERATED);
         itemModelGenerator.register(ModItems.GALLETTA, Models.GENERATED);
         itemModelGenerator.register(ModItems.SALMON_DIP, Models.GENERATED);
         itemModelGenerator.register(ModItems.SALMON_DIPPED_GALLETTA, Models.GENERATED);

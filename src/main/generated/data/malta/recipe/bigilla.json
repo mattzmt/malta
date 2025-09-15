@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "malta:peppercorns",
+    "minecraft:wheat_seeds",
+    "minecraft:potato",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "count": 1,
+    "id": "malta:bigilla"
+  }
+}

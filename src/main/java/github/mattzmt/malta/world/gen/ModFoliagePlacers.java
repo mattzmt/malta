@@ -13,6 +13,5 @@ public class ModFoliagePlacers {
                     new FoliagePlacerType<>(PalmFoliagePlacer.CODEC)
             );
 
-    public static void load() {
-    }
+    public static void load() {}
 }

@@ -29,7 +29,7 @@ public class ModFoodComponents {
             .saturationModifier(0.16f)
             .build();
 
-    public static final FoodComponent IMQARET = new FoodComponent.Builder()
+    public static final FoodComponent MAQRUT = new FoodComponent.Builder()
             .nutrition(6)
             .saturationModifier(0.3f)
             .build();

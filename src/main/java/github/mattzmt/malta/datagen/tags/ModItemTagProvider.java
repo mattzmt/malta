@@ -20,25 +20,39 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.DATE_PALM_LOG.asItem())
                 .add(ModBlocks.DATE_PALM_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_DATE_PALM_LOG.asItem())
-                .add(ModBlocks.STRIPPED_DATE_PALM_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_DATE_PALM_WOOD.asItem())
+                .add(ModBlocks.OLIVE_LOG.asItem())
+                .add(ModBlocks.OLIVE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_OLIVE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_OLIVE_WOOD.asItem());
 
         valueLookupBuilder(ItemTags.LOGS)
                 .add(ModBlocks.DATE_PALM_LOG.asItem())
                 .add(ModBlocks.DATE_PALM_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_DATE_PALM_LOG.asItem())
-                .add(ModBlocks.STRIPPED_DATE_PALM_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_DATE_PALM_WOOD.asItem())
+                .add(ModBlocks.OLIVE_LOG.asItem())
+                .add(ModBlocks.OLIVE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_OLIVE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_OLIVE_WOOD.asItem());
 
         valueLookupBuilder(ItemTags.COMPLETES_FIND_TREE_TUTORIAL)
                 .add(ModBlocks.DATE_PALM_LOG.asItem())
                 .add(ModBlocks.DATE_PALM_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_DATE_PALM_LOG.asItem())
-                .add(ModBlocks.STRIPPED_DATE_PALM_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_DATE_PALM_WOOD.asItem())
+                .add(ModBlocks.OLIVE_LOG.asItem())
+                .add(ModBlocks.OLIVE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_OLIVE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_OLIVE_WOOD.asItem());
 
         valueLookupBuilder(ItemTags.LEAVES)
-                .add(ModBlocks.DATE_PALM_LEAVES.asItem());
+                .add(ModBlocks.DATE_PALM_LEAVES.asItem())
+                .add(ModBlocks.OLIVE_LEAVES.asItem());
 
         valueLookupBuilder(ItemTags.PLANKS)
-                .add(ModBlocks.DATE_PALM_PLANKS.asItem());
+                .add(ModBlocks.DATE_PALM_PLANKS.asItem())
+                .add(ModBlocks.OLIVE_PLANKS.asItem());
 
         valueLookupBuilder(ItemTags.SAPLINGS)
                 .add(ModBlocks.DATE_PALM_SAPLING.asItem());
@@ -48,12 +62,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DATES);
 
         valueLookupBuilder(ItemTags.CHICKEN_FOOD)
-                .add(ModItems.PEPPERCORNS);
+                .add(ModItems.PEPPERCORNS)
+                .add(ModItems.OLIVE);
 
         valueLookupBuilder(ItemTags.PARROT_FOOD)
                 .add(ModItems.PEPPERCORNS)
                 .add(ModBlocks.DATE_BUNCH.asItem())
                 .add(ModItems.DATES);
+
+        valueLookupBuilder(ItemTags.PIG_FOOD)
+                .add(ModItems.OLIVE);
 
         valueLookupBuilder(ItemTags.CREEPER_IGNITERS)
                 .add(ModItems.PEPPERCORNS)
@@ -65,7 +83,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(ItemTags.VILLAGER_PICKS_UP)
                 .add(ModItems.GBEJNA)
                 .add(ModItems.PEPPERED_GBEJNA)
-                .add(ModItems.IMQARET)
+                .add(ModItems.MAQRUT)
                 .add(ModItems.GALLETTA)
                 .add(ModItems.SALMON_DIPPED_GALLETTA)
                 .add(ModItems.BIGILLA_DIPPED_GALLETTA);

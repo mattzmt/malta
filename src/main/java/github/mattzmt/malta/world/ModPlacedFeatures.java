@@ -13,12 +13,16 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> DATE_PALM_PLACED_KEY = registerKey("date_palm_placed");
+    public static final RegistryKey<PlacedFeature> OLIVE_PLACED_KEY = registerKey("olive_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, DATE_PALM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DATE_PALM_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
-                PlacedFeatures.createCountExtraModifier(2, 0.1f, 2), ModBlocks.DATE_PALM_SAPLING));
+                PlacedFeatures.createCountExtraModifier(0, 0.05f, 1), ModBlocks.DATE_PALM_SAPLING));
+
+        register(context, OLIVE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OLIVE_KEY), VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                PlacedFeatures.createCountExtraModifier(1, 0.05f, 0), ModBlocks.OLIVE_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

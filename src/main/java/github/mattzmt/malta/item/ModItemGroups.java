@@ -20,7 +20,8 @@ public class ModItemGroups {
                 entries.add(ModItems.PEPPERCORNS);
                 entries.add(ModItems.DOUGH);
                 entries.add(ModItems.DATES);
-                entries.add(ModItems.IMQARET);
+                entries.add(ModItems.MAQRUT);
+                entries.add(ModItems.OLIVE);
                 entries.add(ModItems.GALLETTA);
                 entries.add(ModItems.SALMON_DIP);
                 entries.add(ModItems.SALMON_DIPPED_GALLETTA);
@@ -35,6 +36,13 @@ public class ModItemGroups {
                 entries.add(ModBlocks.STRIPPED_DATE_PALM_WOOD);
                 entries.add(ModBlocks.DATE_PALM_PLANKS);
                 entries.add(ModBlocks.DATE_PALM_SAPLING.asItem());
+                entries.add(ModBlocks.OLIVE_LEAVES);
+                entries.add(ModBlocks.OLIVE_LOG);
+                entries.add(ModBlocks.OLIVE_WOOD);
+                entries.add(ModBlocks.STRIPPED_OLIVE_LOG);
+                entries.add(ModBlocks.STRIPPED_OLIVE_WOOD);
+                entries.add(ModBlocks.OLIVE_PLANKS);
+                entries.add(ModBlocks.OLIVE_SAPLING.asItem());
             }).build()
     );
 

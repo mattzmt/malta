@@ -2,6 +2,7 @@ package github.mattzmt.malta.world.gen;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.random.Random;
@@ -26,7 +27,11 @@ public class PalmFoliagePlacer extends FoliagePlacer {
     @Override
     protected void generate(TestableWorld world, BlockPlacer placer, Random random, TreeFeatureConfig config, int trunkHeight, TreeNode treeNode, int foliageHeight, int radius, int offset) {
         BlockPos center = treeNode.getCenter();
+        BlockPos aboveCenter = center.up();
         placeFoliageBlock(world, placer, random, config, center);
+        if (world.testBlockState(aboveCenter, AbstractBlock.AbstractBlockState::isAir)) {
+            placeFoliageBlock(world, placer, random, config, aboveCenter);
+        }
         int[][] directions = {
                 {1, 0}, {-1, 0}, {0, 1}, {0, -1}
         };

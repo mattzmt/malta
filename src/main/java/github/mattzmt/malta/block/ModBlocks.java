@@ -92,6 +92,60 @@ public class ModBlocks {
             DATE_PALM_SAPLING_KEY,
             new SaplingBlock(ModSaplingGenerators.DATE_PALM, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).registryKey(DATE_PALM_SAPLING_KEY)));
 
+    private static final RegistryKey<Block> OLIVE_LEAVES_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("olive_leaves"));
+    public static final Block OLIVE_LEAVES = registerWithItem(
+            "olive_leaves",
+            OLIVE_LEAVES_KEY,
+            new TintedParticleLeavesBlock(0, AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .strength(0.2F)
+                    .ticksRandomly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)
+                    .registryKey(OLIVE_LEAVES_KEY)));
+
+    private static final RegistryKey<Block> OLIVE_LOG_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("olive_log"));
+    public static final Block OLIVE_LOG = registerWithItem(
+            "olive_log",
+            OLIVE_LOG_KEY,
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).registryKey(OLIVE_LOG_KEY)));
+
+    private static final RegistryKey<Block> OLIVE_WOOD_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("olive_wood"));
+    public static final Block OLIVE_WOOD = registerWithItem(
+            "olive_wood",
+            OLIVE_WOOD_KEY,
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).registryKey(OLIVE_WOOD_KEY)));
+
+    private static final RegistryKey<Block> STRIPPED_OLIVE_LOG_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("stripped_olive_log"));
+    public static final Block STRIPPED_OLIVE_LOG = registerWithItem(
+            "stripped_olive_log",
+            STRIPPED_OLIVE_LOG_KEY,
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).registryKey(STRIPPED_OLIVE_LOG_KEY)));
+
+    private static final RegistryKey<Block> STRIPPED_OLIVE_WOOD_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("stripped_olive_wood"));
+    public static final Block STRIPPED_OLIVE_WOOD = registerWithItem(
+            "stripped_olive_wood",
+            STRIPPED_OLIVE_WOOD_KEY,
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).registryKey(STRIPPED_OLIVE_WOOD_KEY)));
+
+    private static final RegistryKey<Block> OLIVE_PLANKS_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("olive_planks"));
+    public static final Block OLIVE_PLANKS = registerWithItem(
+            "olive_planks",
+            OLIVE_PLANKS_KEY,
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).registryKey(OLIVE_PLANKS_KEY)));
+
+    private static final RegistryKey<Block> OLIVE_SAPLING_KEY = RegistryKey.of(RegistryKeys.BLOCK, Malta.id("olive_sapling"));
+    public static final Block OLIVE_SAPLING = registerWithItem(
+            "olive_sapling",
+            OLIVE_SAPLING_KEY,
+            new SaplingBlock(ModSaplingGenerators.OLIVE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING).registryKey(OLIVE_SAPLING_KEY)));
+
     public static <T extends Block> T register(String name, T block) {
         return Registry.register(Registries.BLOCK, Malta.id(name), block);
     }

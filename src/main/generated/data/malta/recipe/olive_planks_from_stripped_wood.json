@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "malta:stripped_olive_wood"
+  ],
+  "result": {
+    "count": 4,
+    "id": "malta:olive_planks"
+  }
+}

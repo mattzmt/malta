@@ -56,6 +56,8 @@ public class Malta implements ModInitializer {
 
         StrippableBlockRegistry.register(ModBlocks.DATE_PALM_LOG, ModBlocks.STRIPPED_DATE_PALM_LOG);
         StrippableBlockRegistry.register(ModBlocks.DATE_PALM_WOOD, ModBlocks.STRIPPED_DATE_PALM_WOOD);
+        StrippableBlockRegistry.register(ModBlocks.OLIVE_LOG, ModBlocks.STRIPPED_OLIVE_LOG);
+        StrippableBlockRegistry.register(ModBlocks.OLIVE_WOOD, ModBlocks.STRIPPED_OLIVE_WOOD);
 
         makeFlammable(ModBlocks.DATE_BUNCH);
         makeFlammable(ModBlocks.DATE_PALM_LEAVES, 30, 60);
@@ -65,6 +67,13 @@ public class Malta implements ModInitializer {
         makeFlammable(ModBlocks.STRIPPED_DATE_PALM_WOOD);
         makeFlammable(ModBlocks.DATE_PALM_PLANKS, 5, 20);
         makeFlammable(ModBlocks.DATE_PALM_SAPLING);
+        makeFlammable(ModBlocks.OLIVE_LEAVES, 30, 60);
+        makeFlammable(ModBlocks.OLIVE_LOG);
+        makeFlammable(ModBlocks.OLIVE_WOOD);
+        makeFlammable(ModBlocks.STRIPPED_OLIVE_LOG);
+        makeFlammable(ModBlocks.STRIPPED_OLIVE_WOOD);
+        makeFlammable(ModBlocks.OLIVE_PLANKS, 5, 20);
+        makeFlammable(ModBlocks.OLIVE_SAPLING);
 	}
 
     public static Identifier id(String path) {

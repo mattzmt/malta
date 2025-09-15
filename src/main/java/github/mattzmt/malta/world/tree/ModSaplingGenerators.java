@@ -9,4 +9,7 @@ import java.util.Optional;
 public class ModSaplingGenerators {
     public static final SaplingGenerator DATE_PALM = new SaplingGenerator(Malta.MOD_ID + ":date_palm",
             Optional.empty(), Optional.of(ModConfiguredFeatures.DATE_PALM_KEY), Optional.empty());
+
+    public static final SaplingGenerator OLIVE = new SaplingGenerator(Malta.MOD_ID + ":olive",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.OLIVE_KEY), Optional.empty());
 }

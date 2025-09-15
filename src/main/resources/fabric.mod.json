@@ -23,7 +23,10 @@
       ],
 		"fabric-datagen": [
 			"github.mattzmt.malta.MaltaDataGenerator"
-		]
+		],
+      "terrablender": [
+        "github.mattzmt.malta.world.biome.ModTerrablenderAPI"
+      ]
 	},
 	"mixins": [
 		"malta.mixins.json"

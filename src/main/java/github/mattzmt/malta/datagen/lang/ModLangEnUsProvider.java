@@ -4,6 +4,7 @@ import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.block.ModBlocks;
 import github.mattzmt.malta.item.ModItemGroups;
 import github.mattzmt.malta.item.ModItems;
+import github.mattzmt.malta.world.biome.ModBiomes;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -28,6 +29,9 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
+        //BIOMES
+        addText(translationBuilder, ModBiomes.MAQUIS_TITLE, "Maquis");
+
         //ITEM GROUPS
         addText(translationBuilder, ModItemGroups.MALTA_GROUP_TITLE, "Malta");
 
@@ -38,7 +42,8 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PEPPERCORNS, "Peppercorns");
         translationBuilder.add(ModItems.DOUGH, "Dough");
         translationBuilder.add(ModItems.DATES, "Dates");
-        translationBuilder.add(ModItems.IMQARET, "Imqaret");
+        translationBuilder.add(ModItems.MAQRUT, "Maqrut");
+        translationBuilder.add(ModItems.OLIVE, "Olive");
         translationBuilder.add(ModItems.GALLETTA, "Galletta");
         translationBuilder.add(ModItems.SALMON_DIP, "Smoked Salmon Dip");
         translationBuilder.add(ModItems.SALMON_DIPPED_GALLETTA, "Smoked Salmon dipped Galletta");
@@ -55,5 +60,12 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.STRIPPED_DATE_PALM_WOOD, "Stripped Date Palm Wood");
         translationBuilder.add(ModBlocks.DATE_PALM_PLANKS, "Date Palm Planks");
         translationBuilder.add(ModBlocks.DATE_PALM_SAPLING, "Date Palm Sapling");
+        translationBuilder.add(ModBlocks.OLIVE_LEAVES, "Olive Leaves");
+        translationBuilder.add(ModBlocks.OLIVE_LOG, "Olive Log");
+        translationBuilder.add(ModBlocks.OLIVE_WOOD, "Olive Wood");
+        translationBuilder.add(ModBlocks.STRIPPED_OLIVE_LOG, "Stripped Olive Log");
+        translationBuilder.add(ModBlocks.STRIPPED_OLIVE_WOOD, "Stripped Olive Wood");
+        translationBuilder.add(ModBlocks.OLIVE_PLANKS, "Olive Planks");
+        translationBuilder.add(ModBlocks.OLIVE_SAPLING, "Olive Sapling");
     }
 }

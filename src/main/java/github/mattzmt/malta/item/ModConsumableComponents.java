@@ -45,7 +45,7 @@ public class ModConsumableComponents {
             .consumeSeconds(0.8f)
             .build();
 
-    public static final ConsumableComponent IMQARET = food()
+    public static final ConsumableComponent MAQRUT = food()
             .consumeSeconds(1)
             .build();
 
