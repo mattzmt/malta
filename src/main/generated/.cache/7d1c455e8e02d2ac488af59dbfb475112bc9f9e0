@@ -18,7 +18,10 @@ bc867d794d56d49cf1db190e6e6f8a089db93293 data/malta/advancement/recipes/food/cur
 cb65c7d0669f7e353a67c985bc0f649af90f2592 data/malta/advancement/recipes/food/dough.json
 d6be2e4872c4fa8f1069d5800e212f919a7bd5f6 data/malta/advancement/recipes/food/galletta.json
 8050abab0115899925a9fd12c5db7a96e52c2150 data/malta/advancement/recipes/food/gbejna.json
+f76d3ad7f3b02822616e6883dd0f3ee887837d40 data/malta/advancement/recipes/food/gbejna_dip.json
+203a3d611f275764169645b6120168b9e43d7f3a data/malta/advancement/recipes/food/gbejna_dipped_galletta.json
 6d42bfe9f5beabd85e76e79b2d110dd589dc1773 data/malta/advancement/recipes/food/maqrut.json
+cdd439e1ee688ce5811c2f305d4132bf8091c9ac data/malta/advancement/recipes/food/olive_oil.json
 ef9f701439b0a658fe3794eaa9a72a2f90807e49 data/malta/advancement/recipes/food/peppered_gbejna.json
 81dae2df0df3f826059262c7022feed60d931c0f data/malta/advancement/recipes/food/salmon_dip.json
 8220b27a8073603f174e861fe424def5daaf6010 data/malta/advancement/recipes/food/salmon_dipped_galletta.json
@@ -34,7 +37,10 @@ b8abb8f12e6dbc61498e1c6b98e82e9f65aa011e data/malta/recipe/date_palm_wood.json
 68f2634eb7d35164e28f39cfdb2b81bad9785009 data/malta/recipe/dough.json
 f368a7f88b7b04559c557d6a3eaf814942c05761 data/malta/recipe/galletta.json
 3ef37dc893d17dec96c7cea899d41a661f744121 data/malta/recipe/gbejna.json
+af2f1685ea070190d85fd439ce3779874de34375 data/malta/recipe/gbejna_dip.json
+fcb17ddd9bbc3b1f40b54329d963821944c4e605 data/malta/recipe/gbejna_dipped_galletta.json
 2a0447b863172c960b81b1eaa840e5f28b7de860 data/malta/recipe/maqrut.json
+139c89474c3c9201f563fda0bc46bbed7ad96f42 data/malta/recipe/olive_oil.json
 34436d928bc7937b34ac437324b7881a2dbd125c data/malta/recipe/olive_planks_from_log.json
 d5c4006af0361883063d101eff8fed5822a8e0bf data/malta/recipe/olive_planks_from_stripped_log.json
 cabf13aab0f292fa7ab6ff63f1be007cad6491ae data/malta/recipe/olive_planks_from_stripped_wood.json

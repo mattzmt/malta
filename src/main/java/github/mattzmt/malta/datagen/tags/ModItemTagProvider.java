@@ -86,6 +86,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.MAQRUT)
                 .add(ModItems.GALLETTA)
                 .add(ModItems.SALMON_DIPPED_GALLETTA)
-                .add(ModItems.BIGILLA_DIPPED_GALLETTA);
+                .add(ModItems.BIGILLA_DIPPED_GALLETTA)
+                .add(ModItems.GBEJNA_DIPPED_GALLETTA);
     }
 }

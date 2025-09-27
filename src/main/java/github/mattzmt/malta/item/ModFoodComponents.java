@@ -39,6 +39,10 @@ public class ModFoodComponents {
             .saturationModifier(0.125f)
             .build();
 
+    public static final FoodComponent OLIVE_OIL = new FoodComponent.Builder()
+            .nutrition(15)
+            .build();
+
     public static final FoodComponent GALLETTA = new FoodComponent.Builder()
             .nutrition(4)
             .saturationModifier(0.25f)

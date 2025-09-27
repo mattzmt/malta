@@ -1,9 +1,15 @@
 package github.mattzmt.malta;
 
 import github.mattzmt.malta.block.ModBlocks;
+import github.mattzmt.malta.entity.ModEntities;
+import github.mattzmt.malta.entity.client.SnailModel;
+import github.mattzmt.malta.entity.client.renderer.SnailModelLayers;
+import github.mattzmt.malta.entity.client.renderer.SnailRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.BlockRenderLayer;
 import org.slf4j.Logger;
@@ -29,6 +35,9 @@ public class MaltaClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.DATE_BUNCH, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.DATE_PALM_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.OLIVE_SAPLING, BlockRenderLayer.CUTOUT);
+
+        SnailModelLayers.registerLayers();
+        EntityRendererRegistry.register(ModEntities.SNAIL, SnailRenderer::new);
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
             if (world != null && pos != null) {

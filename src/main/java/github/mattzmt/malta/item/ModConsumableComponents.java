@@ -46,11 +46,18 @@ public class ModConsumableComponents {
             .build();
 
     public static final ConsumableComponent MAQRUT = food()
-            .consumeSeconds(1)
             .build();
 
     public static final ConsumableComponent OLIVE = food()
             .consumeSeconds(0.8f)
+            .build();
+
+    public static final ConsumableComponent OLIVE_OIL = drink()
+            .consumeSeconds(3.2f)
+            .consumeEffect(new ApplyEffectsConsumeEffect(List.of(
+                    new StatusEffectInstance(StatusEffects.SLOWNESS, 30 * 20, 1),
+                    new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 30 * 20)
+            )))
             .build();
 
     public static final ConsumableComponent GALLETTA = food()
@@ -67,5 +74,11 @@ public class ModConsumableComponents {
             .consumeSeconds(1)
             .consumeEffect(new ApplyEffectsConsumeEffect(
                     new StatusEffectInstance(StatusEffects.ABSORPTION, 15 * 20)))
+            .build();
+
+    public static final ConsumableComponent GBEJNA_DIPPED_GALLETTA = food()
+            .consumeSeconds(1)
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.REGENERATION, 10 * 20, 1)))
             .build();
 }

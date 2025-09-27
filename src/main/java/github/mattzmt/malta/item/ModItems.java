@@ -2,9 +2,11 @@ package github.mattzmt.malta.item;
 
 import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.block.ModBlocks;
+import github.mattzmt.malta.entity.ModEntities;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -75,6 +77,16 @@ public class ModItems {
                     .food(ModFoodComponents.OLIVE, ModConsumableComponents.OLIVE)
                     .registryKey(OLIVE_KEY)));
 
+    private static final RegistryKey<Item> OLIVE_OIL_KEY = RegistryKey.of(RegistryKeys.ITEM, Malta.id("olive_oil"));
+    public static final Item OLIVE_OIL = register(
+            "olive_oil",
+            new Item(new Item.Settings()
+                    .recipeRemainder(Items.BUCKET)
+                    .useRemainder(Items.BUCKET)
+                    .food(ModFoodComponents.OLIVE_OIL, ModConsumableComponents.OLIVE_OIL)
+                    .maxCount(16)
+                    .registryKey(OLIVE_OIL_KEY)));
+
     private static final RegistryKey<Item> GALLETTA_KEY = RegistryKey.of(RegistryKeys.ITEM, Malta.id("galletta"));
     public static final Item GALLETTA = register(
             "galletta",
@@ -114,6 +126,27 @@ public class ModItems {
                     .food(ModFoodComponents.GALLETTA, ModConsumableComponents.BIGILLA_DIPPED_GALLETTA)
                     .maxCount(4)
                     .registryKey(BIGILLA_DIPPED_GALLETTA_KEY)));
+
+    private static final RegistryKey<Item> GBEJNA_DIP_KEY = RegistryKey.of(RegistryKeys.ITEM, Malta.id("gbejna_dip"));
+    public static final Item GBEJNA_DIP = register(
+            "gbejna_dip",
+            new Item(new Item.Settings()
+                    .useRemainder(Items.BOWL)
+                    .maxCount(1)
+                    .registryKey(GBEJNA_DIP_KEY)));
+
+    private static final RegistryKey<Item> GBEJNA_DIPPED_GALLETTA_KEY = RegistryKey.of(RegistryKeys.ITEM, Malta.id("gbejna_dipped_galletta"));
+    public static final Item GBEJNA_DIPPED_GALLETTA = register(
+            "gbejna_dipped_galletta",
+            new Item(new Item.Settings()
+                    .food(ModFoodComponents.GALLETTA, ModConsumableComponents.GBEJNA_DIPPED_GALLETTA)
+                    .maxCount(4)
+                    .registryKey(GBEJNA_DIPPED_GALLETTA_KEY)));
+
+    private static final RegistryKey<Item> SNAIL_SPAWN_EGG_KEY = RegistryKey.of(RegistryKeys.ITEM, Malta.id("snail_spawn_egg"));
+    public static final Item SNAIL_SPAWN_EGG = register(
+            "snail_spawn_egg",
+            new SpawnEggItem(ModEntities.SNAIL, new Item.Settings().registryKey(SNAIL_SPAWN_EGG_KEY)));
 
     public static <T extends Item> T register(String name, T item) {
         return Registry.register(Registries.ITEM, Malta.id(name), item);

@@ -1,6 +1,8 @@
 package github.mattzmt.malta;
 
 import github.mattzmt.malta.block.ModBlocks;
+import github.mattzmt.malta.entity.ModEntities;
+import github.mattzmt.malta.entity.custom.SnailEntity;
 import github.mattzmt.malta.item.ModItemGroups;
 import github.mattzmt.malta.item.ModItems;
 import github.mattzmt.malta.util.ModLootTableModifiers;
@@ -8,6 +10,7 @@ import github.mattzmt.malta.world.gen.ModFoliagePlacers;
 import github.mattzmt.malta.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -37,6 +40,9 @@ public class Malta implements ModInitializer {
         ModLootTableModifiers.modifyLootTables();
         ModWorldGeneration.generateModWorldGen();
         ModFoliagePlacers.load();
+        ModEntities.registerModEntities();
+
+        FabricDefaultAttributeRegistry.register(ModEntities.SNAIL, SnailEntity.createAttributes());
 
         CompostingChanceRegistry.INSTANCE.add(ModItems.PEPPERCORNS, 0.2f);
 

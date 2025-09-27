@@ -2,6 +2,7 @@ package github.mattzmt.malta.datagen.lang;
 
 import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.block.ModBlocks;
+import github.mattzmt.malta.entity.ModEntities;
 import github.mattzmt.malta.item.ModItemGroups;
 import github.mattzmt.malta.item.ModItems;
 import github.mattzmt.malta.world.biome.ModBiomes;
@@ -44,11 +45,14 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
         translationBuilder.add(ModItems.DATES, "Dates");
         translationBuilder.add(ModItems.MAQRUT, "Maqrut");
         translationBuilder.add(ModItems.OLIVE, "Olive");
+        translationBuilder.add(ModItems.OLIVE_OIL, "Olive Oil");
         translationBuilder.add(ModItems.GALLETTA, "Galletta");
         translationBuilder.add(ModItems.SALMON_DIP, "Smoked Salmon Dip");
         translationBuilder.add(ModItems.SALMON_DIPPED_GALLETTA, "Smoked Salmon dipped Galletta");
         translationBuilder.add(ModItems.BIGILLA, "Bigilla");
         translationBuilder.add(ModItems.BIGILLA_DIPPED_GALLETTA, "Bigilla dipped Galletta");
+        translationBuilder.add(ModItems.GBEJNA_DIP, "Ġbejna Dip");
+        translationBuilder.add(ModItems.GBEJNA_DIPPED_GALLETTA, "Ġbejna dipped Galletta");
 
         //BLOCKS
         translationBuilder.add(ModBlocks.BLACK_PEPPER_CROP, "Black Pepper Crop");
@@ -67,5 +71,8 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.STRIPPED_OLIVE_WOOD, "Stripped Olive Wood");
         translationBuilder.add(ModBlocks.OLIVE_PLANKS, "Olive Planks");
         translationBuilder.add(ModBlocks.OLIVE_SAPLING, "Olive Sapling");
+
+        //ENTITIES
+        translationBuilder.add(ModEntities.SNAIL, "Snail");
     }
 }

@@ -22,11 +22,15 @@ public class ModItemGroups {
                 entries.add(ModItems.DATES);
                 entries.add(ModItems.MAQRUT);
                 entries.add(ModItems.OLIVE);
+                entries.add(ModItems.OLIVE_OIL);
                 entries.add(ModItems.GALLETTA);
                 entries.add(ModItems.SALMON_DIP);
                 entries.add(ModItems.SALMON_DIPPED_GALLETTA);
                 entries.add(ModItems.BIGILLA);
                 entries.add(ModItems.BIGILLA_DIPPED_GALLETTA);
+                entries.add(ModItems.GBEJNA_DIP);
+                entries.add(ModItems.GBEJNA_DIPPED_GALLETTA);
+                entries.add(ModItems.SNAIL_SPAWN_EGG);
 
                 entries.add(ModBlocks.DATE_BUNCH);
                 entries.add(ModBlocks.DATE_PALM_LEAVES);
