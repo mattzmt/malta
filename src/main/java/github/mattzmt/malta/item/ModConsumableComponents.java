@@ -81,4 +81,9 @@ public class ModConsumableComponents {
             .consumeEffect(new ApplyEffectsConsumeEffect(
                     new StatusEffectInstance(StatusEffects.REGENERATION, 10 * 20, 1)))
             .build();
+
+    public static final ConsumableComponent RAW_SNAIL = food()
+            .consumeEffect(new ApplyEffectsConsumeEffect(
+                    new StatusEffectInstance(StatusEffects.HUNGER, 20 * 30), 0.8f))
+            .build();
 }

@@ -64,8 +64,8 @@ public class ModItems {
     public static final Item OLIVE_OIL = register(
             "olive_oil",
             new Item(newSettings("olive_oil")
-                    .recipeRemainder(Items.BUCKET)
-                    .useRemainder(Items.BUCKET)
+                    .recipeRemainder(Items.GLASS_BOTTLE)
+                    .useRemainder(Items.GLASS_BOTTLE)
                     .food(ModFoodComponents.OLIVE_OIL, ModConsumableComponents.OLIVE_OIL)
                     .maxCount(16)));
 
@@ -78,6 +78,7 @@ public class ModItems {
     public static final Item SALMON_DIP = register(
             "salmon_dip",
             new Item(newSettings("salmon_dip")
+                    .recipeRemainder(Items.BOWL)
                     .useRemainder(Items.BOWL)
                     .maxCount(1)));
 
@@ -90,6 +91,7 @@ public class ModItems {
     public static final Item BIGILLA = register(
             "bigilla",
             new Item(newSettings("bigilla")
+                    .recipeRemainder(Items.BOWL)
                     .useRemainder(Items.BOWL)
                     .maxCount(1)));
 
@@ -102,6 +104,7 @@ public class ModItems {
     public static final Item GBEJNA_DIP = register(
             "gbejna_dip",
             new Item(newSettings("gbejna_dip")
+                    .recipeRemainder(Items.BOWL)
                     .useRemainder(Items.BOWL)
                     .maxCount(1)));
 
@@ -114,6 +117,22 @@ public class ModItems {
     public static final Item SNAIL_SPAWN_EGG = register(
             "snail_spawn_egg",
             new SpawnEggItem(ModEntities.SNAIL, newSettings("snail_spawn_egg")));
+
+    public static final Item SNAIL_SHELL = register(
+            "snail_shell",
+            new Item(newSettings("snail_shell")));
+
+    public static final Item RAW_SNAIL = register(
+            "raw_snail",
+            new Item(newSettings("raw_snail")
+                    .useRemainder(ModItems.SNAIL_SHELL)
+                    .food(ModFoodComponents.RAW_SNAIL, ModConsumableComponents.RAW_SNAIL)));
+
+    public static final Item COOKED_SNAIL = register(
+            "cooked_snail",
+            new Item(newSettings("cooked_snail")
+                    .useRemainder(ModItems.SNAIL_SHELL)
+                    .food(ModFoodComponents.COOKED_SNAIL)));
 
     public static <T extends Item> T register(String name, T item) {
         return Registry.register(Registries.ITEM, Malta.id(name), item);}

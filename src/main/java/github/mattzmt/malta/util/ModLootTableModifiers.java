@@ -12,10 +12,10 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 
 public class ModLootTableModifiers {
-    private static final Identifier VINE_ID
-            = Identifier.of("minecraft", "blocks/vine");
-    private static final Identifier JUNGLE_LEAVES_ID
-            = Identifier.of("minecraft", "blocks/jungle_leaves");
+    private static final Identifier VINE_ID =
+            Identifier.of("minecraft", "blocks/vine");
+    private static final Identifier JUNGLE_LEAVES_ID =
+            Identifier.of("minecraft", "blocks/jungle_leaves");
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registry) -> {
@@ -26,8 +26,7 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.PEPPERCORNS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 4)).build());
 
-                tableBuilder.pool(poolBuilder.build());
-            }
+                tableBuilder.pool(poolBuilder.build());}
 
             if(JUNGLE_LEAVES_ID.equals(key.getValue())) {
                 LootPool.Builder poolBuilder = LootPool.builder()
@@ -36,8 +35,7 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.PEPPERCORNS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 4)).build());
 
-                tableBuilder.pool(poolBuilder.build());
-            }
+                tableBuilder.pool(poolBuilder.build());}
 
             if(LootTables.HERO_OF_THE_VILLAGE_FARMER_GIFT_GAMEPLAY.equals(key)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
@@ -46,8 +44,7 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.PEPPERCORNS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2, 6)).build());
 
-                tableBuilder.pool(poolBuilder.build());
-            }
+                tableBuilder.pool(poolBuilder.build());}
 
             if(LootTables.JUNGLE_TEMPLE_CHEST.equals(key)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
@@ -56,8 +53,7 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.PEPPERCORNS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2, 6)).build());
 
-                tableBuilder.pool(poolBuilder.build());
-            }
+                tableBuilder.pool(poolBuilder.build());}
 
             if(LootTables.VILLAGE_CARTOGRAPHER_CHEST.equals(key)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
@@ -66,8 +62,7 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.PEPPERCORNS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2, 6)).build());
 
-                tableBuilder.pool(poolBuilder.build());
-            }
+                tableBuilder.pool(poolBuilder.build());}
 
             if(LootTables.VILLAGE_SAVANNA_HOUSE_CHEST.equals(key)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
@@ -76,8 +71,7 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.PEPPERCORNS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2, 6)).build());
 
-                tableBuilder.pool(poolBuilder.build());
-            }
+                tableBuilder.pool(poolBuilder.build());}
 
             if(LootTables.VILLAGE_PLAINS_CHEST.equals(key)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
@@ -86,8 +80,7 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.PEPPERCORNS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2, 6)).build());
 
-                tableBuilder.pool(poolBuilder.build());
-            }
+                tableBuilder.pool(poolBuilder.build());}
 
             if(LootTables.SPAWN_BONUS_CHEST.equals(key)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
@@ -96,8 +89,7 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.PEPPERCORNS))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2, 6)).build());
 
-                tableBuilder.pool(poolBuilder.build());
-            }
+                tableBuilder.pool(poolBuilder.build());}
         });
     }
 }

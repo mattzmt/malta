@@ -20,6 +20,7 @@
   "entity.malta.snail": "Snail",
   "item.malta.bigilla": "Bigilla",
   "item.malta.bigilla_dipped_galletta": "Bigilla dipped Galletta",
+  "item.malta.cooked_snail": "Cooked Snail",
   "item.malta.curdled_milk_bucket": "Curdled Milk Bucket",
   "item.malta.dates": "Dates",
   "item.malta.dough": "Dough",
@@ -32,7 +33,9 @@
   "item.malta.olive_oil": "Olive Oil",
   "item.malta.peppercorns": "Peppercorns",
   "item.malta.peppered_gbejna": "Peppered Ġbejna",
+  "item.malta.raw_snail": "Raw Snail",
   "item.malta.salmon_dip": "Smoked Salmon Dip",
   "item.malta.salmon_dipped_galletta": "Smoked Salmon dipped Galletta",
+  "item.malta.snail_shell": "Snail Shell",
   "itemGroup.malta.nev_group": "Malta"
 }

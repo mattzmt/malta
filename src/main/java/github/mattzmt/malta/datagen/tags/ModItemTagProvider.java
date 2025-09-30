@@ -63,12 +63,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         valueLookupBuilder(ItemTags.CHICKEN_FOOD)
                 .add(ModItems.PEPPERCORNS)
-                .add(ModItems.OLIVE);
+                .add(ModItems.OLIVE)
+                .add(ModItems.RAW_SNAIL)
+                .add(ModItems.COOKED_SNAIL);
 
         valueLookupBuilder(ItemTags.PARROT_FOOD)
                 .add(ModItems.PEPPERCORNS)
                 .add(ModBlocks.DATE_BUNCH.asItem())
-                .add(ModItems.DATES);
+                .add(ModItems.DATES)
+                .add(ModItems.RAW_SNAIL)
+                .add(ModItems.COOKED_SNAIL);
 
         valueLookupBuilder(ItemTags.PIG_FOOD)
                 .add(ModItems.OLIVE);
@@ -87,6 +91,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.GALLETTA)
                 .add(ModItems.SALMON_DIPPED_GALLETTA)
                 .add(ModItems.BIGILLA_DIPPED_GALLETTA)
-                .add(ModItems.GBEJNA_DIPPED_GALLETTA);
+                .add(ModItems.GBEJNA_DIPPED_GALLETTA)
+                .add(ModItems.COOKED_SNAIL);
     }
 }

@@ -31,6 +31,9 @@ public class ModItemGroups {
                 entries.add(ModItems.GBEJNA_DIP);
                 entries.add(ModItems.GBEJNA_DIPPED_GALLETTA);
                 entries.add(ModItems.SNAIL_SPAWN_EGG);
+                entries.add(ModItems.RAW_SNAIL);
+                entries.add(ModItems.COOKED_SNAIL);
+                entries.add(ModItems.SNAIL_SHELL);
 
                 entries.add(ModBlocks.DATE_BUNCH);
                 entries.add(ModBlocks.DATE_PALM_LEAVES);

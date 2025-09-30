@@ -18,6 +18,7 @@ c6bb40e6ec0ba4ba5cca9fe1e74434515fa8d7aa assets/malta/blockstates/stripped_olive
 f659e0b9aef4cfa5cba6e3e34fa3b78e20401a91 assets/malta/blockstates/stripped_olive_wood.json
 3af5841dd4954dd5bf8eeaeba347e43781bc941b assets/malta/items/bigilla.json
 c62a085cc598c50eca3af8220569a4ffacecea00 assets/malta/items/bigilla_dipped_galletta.json
+1c0ed2296e0f209ff679d0ba3c0c072a824ca703 assets/malta/items/cooked_snail.json
 808250db7035e728cb6b89c7da41f904730dff6f assets/malta/items/curdled_milk_bucket.json
 ff0ec02335edb14c1338bfd682981c7f514db9ef assets/malta/items/date_bunch.json
 f7fed62baf1cf4a4ded80d35ad906b747895129b assets/malta/items/date_palm_leaves.json
@@ -41,8 +42,10 @@ a8175b880595179dd3a2eb5eb1f59ceb4ca2301b assets/malta/items/olive_planks.json
 73a882d9a0462084f70941e78452365f36ff300c assets/malta/items/olive_wood.json
 e597f96e377ea1ec69f63f57ab5ff6be903c47b3 assets/malta/items/peppercorns.json
 806326cd6582c31868a7ba3fdb27bd2b05384494 assets/malta/items/peppered_gbejna.json
+54b40ae5b15cb9b5071a2c54864a756994c1a4c6 assets/malta/items/raw_snail.json
 b64b0dcd5361290b9e74ad4e5b94ab024606b29f assets/malta/items/salmon_dip.json
 23449d4d45e694d472bc940c6722bcc4a07ba82a assets/malta/items/salmon_dipped_galletta.json
+42732a746fefd09285e3f7e5699fdceac35affbd assets/malta/items/snail_shell.json
 8d12fd51325d8819db79bbd8d3a5bfde70081ca0 assets/malta/items/snail_spawn_egg.json
 47379387fa59ae9af4b0ce29ab1a82b8cabd1115 assets/malta/items/stripped_date_palm_log.json
 8977c908072a55ea4d4314bae40866630ddd6cf8 assets/malta/items/stripped_date_palm_wood.json
@@ -81,6 +84,7 @@ aaece89c065f938228749a77c43a2d54725b5535 assets/malta/models/block/stripped_oliv
 f63155466e9ce487ef4ff1f05600c6ac9544b9c1 assets/malta/models/block/stripped_olive_wood.json
 e138eafb8d341e8eec0cfbd604b96e173315262c assets/malta/models/item/bigilla.json
 6ca2c629cc94c60b3d7fa8b27f2b759127293f92 assets/malta/models/item/bigilla_dipped_galletta.json
+af856fe16de993f2a6c9b4df76fa359bd4e71c38 assets/malta/models/item/cooked_snail.json
 b96570e6a8c4b6e06ea7464ebda4c7d5f7fbd6f8 assets/malta/models/item/curdled_milk_bucket.json
 531d74f7da967b4257a7080ab5b577b6386f9e98 assets/malta/models/item/date_bunch.json
 ff0743b1742fc28ecbb03506970d796552c58791 assets/malta/models/item/date_palm_sapling.json
@@ -96,6 +100,8 @@ b38ddd5e8f748a135cb1b46a8eba3caab6bf4d74 assets/malta/models/item/gbejna_dip.jso
 2f9c28dfb0b6419667c93267054b6c6a732c9e47 assets/malta/models/item/olive_sapling.json
 0cef6ead9c322b3549062a748c9d40f4b838f75c assets/malta/models/item/peppercorns.json
 727530f40c70410764faee75204fd16625a8fb9a assets/malta/models/item/peppered_gbejna.json
+f2027eeb4514aa21d969a158c8fc71cc389bce6b assets/malta/models/item/raw_snail.json
 2ea5223b8823dcaf599442521acd0ee954c9e394 assets/malta/models/item/salmon_dip.json
 88a92d0ab40984886fac7dd746d9b70fa83eb9e1 assets/malta/models/item/salmon_dipped_galletta.json
+c171a7ed23be126e6d085d3a1dee9440406399dc assets/malta/models/item/snail_shell.json
 a9b8998e333424086003135ef182cf5da1a57a48 assets/malta/models/item/snail_spawn_egg.json

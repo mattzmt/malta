@@ -47,4 +47,14 @@ public class ModFoodComponents {
             .nutrition(4)
             .saturationModifier(0.25f)
             .build();
+
+    public static final FoodComponent RAW_SNAIL = new FoodComponent.Builder()
+            .nutrition(2)
+            .saturationModifier(0.3f)
+            .build();
+
+    public static final FoodComponent COOKED_SNAIL = new FoodComponent.Builder()
+            .nutrition(6)
+            .saturationModifier(0.6f)
+            .build();
 }

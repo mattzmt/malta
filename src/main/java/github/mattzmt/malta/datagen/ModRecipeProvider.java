@@ -27,7 +27,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
             @Override
             public void generate() {
+                Item milkBucket = Items.MILK_BUCKET;
                 Item curdledMilkBucket = ModItems.CURDLED_MILK_BUCKET;
+                Item rawSnail = ModItems.RAW_SNAIL;
+                Item cookedSnail = ModItems.COOKED_SNAIL;
                 Item gbejna = ModItems.GBEJNA;
                 Item peppercorns = ModItems.PEPPERCORNS;
                 Item wheat = Items.WHEAT;
@@ -45,18 +48,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 Item bigilla = ModItems.BIGILLA;
                 Item oliveOil = ModItems.OLIVE_OIL;
                 Item gbejnaDip = ModItems.GBEJNA_DIP;
+                Item pepperedGbejna = ModItems.PEPPERED_GBEJNA;
+                Item maqrut = ModItems.MAQRUT;
+                Item salmonDippedGalletta = ModItems.SALMON_DIPPED_GALLETTA;
 
                 Block datePalmLog = ModBlocks.DATE_PALM_LOG;
 
-                offerFoodCookingRecipe("smelting", RecipeSerializer.SMELTING, SmeltingRecipe::new, 10 * 20, Items.MILK_BUCKET, curdledMilkBucket, 0.35f);
-                offerFoodCookingRecipe("smoking", RecipeSerializer.SMOKING, SmokingRecipe::new, 5 * 20, Items.MILK_BUCKET, curdledMilkBucket, 0.35f);
+                offerFoodCookingRecipe("smelting", RecipeSerializer.SMELTING, SmeltingRecipe::new, 10 * 20, milkBucket, curdledMilkBucket, 0.35f);
+                offerFoodCookingRecipe("smoking", RecipeSerializer.SMOKING, SmokingRecipe::new, 5 * 20, milkBucket, curdledMilkBucket, 0.35f);
+
+                offerFoodCookingRecipe("smelting", RecipeSerializer.SMELTING, SmeltingRecipe::new, 10 * 20, rawSnail, cookedSnail, 0.35f);
+                offerFoodCookingRecipe("smoking", RecipeSerializer.SMOKING, SmokingRecipe::new, 5 * 20, rawSnail, cookedSnail, 0.35f);
 
                 createShapeless(RecipeCategory.FOOD, gbejna, 2)
                         .input(curdledMilkBucket)
                         .criterion(hasItem(curdledMilkBucket), conditionsFromItem(curdledMilkBucket))
                         .offerTo(recipeExporter, "gbejna");
 
-                createShapeless(RecipeCategory.FOOD, ModItems.PEPPERED_GBEJNA, 1)
+                createShapeless(RecipeCategory.FOOD, pepperedGbejna, 1)
                         .input(gbejna)
                         .input(peppercorns)
                         .criterion(hasItem(gbejna), conditionsFromItem(gbejna))
@@ -70,7 +79,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(waterBucket), conditionsFromItem(waterBucket))
                         .offerTo(recipeExporter, "dough");
 
-                createShapeless(RecipeCategory.FOOD, ModItems.MAQRUT, 2)
+                createShapeless(RecipeCategory.FOOD, maqrut, 2)
                         .input(dough)
                         .input(dates, 2)
                         .criterion(hasItem(dough), conditionsFromItem(dough))
@@ -99,7 +108,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(bowl), conditionsFromItem(bowl))
                         .offerTo(recipeExporter, "salmon_dip");
 
-                createShapeless(RecipeCategory.FOOD, ModItems.SALMON_DIPPED_GALLETTA, 2)
+                createShapeless(RecipeCategory.FOOD, salmonDippedGalletta, 2)
                         .input(salmonDip)
                         .input(galletta, 2)
                         .criterion(hasItem(salmonDip), conditionsFromItem(salmonDip))

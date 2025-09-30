@@ -1,9 +1,6 @@
 package github.mattzmt.malta;
 
-import github.mattzmt.malta.datagen.ModLootTableProvider;
-import github.mattzmt.malta.datagen.ModModelProvider;
-import github.mattzmt.malta.datagen.ModRecipeProvider;
-import github.mattzmt.malta.datagen.ModRegistryDataGenerator;
+import github.mattzmt.malta.datagen.*;
 import github.mattzmt.malta.datagen.lang.ModLangEnUsProvider;
 import github.mattzmt.malta.datagen.tags.ModBlockTagProvider;
 import github.mattzmt.malta.datagen.tags.ModItemTagProvider;

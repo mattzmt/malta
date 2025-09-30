@@ -1,13 +1,11 @@
 package github.mattzmt.malta.entity.custom;
 
+import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.block.ModBlocks;
 import github.mattzmt.malta.entity.ModEntities;
 import github.mattzmt.malta.entity.client.ModCracks;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.AnimationState;
-import net.minecraft.entity.EntityData;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnReason;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -52,6 +50,7 @@ public class SnailEntity extends AnimalEntity {
         this.goalSelector.add(2, new AnimalMateGoal(this, 1.5D));
         this.goalSelector.add(3, new TemptGoal(this, 1.5D, stack -> stack.isOf(Items.SHORT_GRASS), false));
         this.goalSelector.add(4, new FollowParentGoal(this, 2D));
+        this.goalSelector.add(5, new WanderAroundFarGoal(this, 1D));
         this.goalSelector.add(5, new WanderAroundFarGoal(this, 1D));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.add(7, new LookAroundGoal(this));}
@@ -115,7 +114,6 @@ public class SnailEntity extends AnimalEntity {
                                  @Nullable EntityData entityData) {
         return super.initialize(world, difficulty, spawnReason, entityData);}
 
-    /* SOUNDS */
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
@@ -199,4 +197,29 @@ public class SnailEntity extends AnimalEntity {
 
     public Cracks.CrackLevel getCrackLevel() {
         return ModCracks.SNAIL_CRACKS.getCrackLevel(this.getHealth() / this.getMaxHealth());}
+
+    public void onDeath(DamageSource damageSource) {
+        if (!this.isRemoved() && !this.dead) {
+            Entity entity = damageSource.getAttacker();
+            LivingEntity livingEntity = this.getPrimeAdversary();
+            if (livingEntity != null) {
+                livingEntity.updateKilledAdvancementCriterion(this, damageSource);}
+
+            if (this.isSleeping()) {
+                this.wakeUp();}
+
+            if (!this.getWorld().isClient && this.hasCustomName()) {
+                Malta.LOGGER.info("Named entity {} died: {}", this, this.getDamageTracker().getDeathMessage().getString());}
+
+            this.dead = true;
+            this.getDamageTracker().update();
+            if (this.getWorld() instanceof ServerWorld serverWorld) {
+                if (entity == null || entity.onKilledOther(serverWorld, this)) {
+                    this.emitGameEvent(GameEvent.ENTITY_DIE);
+                    this.drop(serverWorld, damageSource);
+                    this.onKilledBy(livingEntity);}
+
+                this.getWorld().sendEntityStatus(this, EntityStatuses.PLAY_DEATH_SOUND_OR_ADD_PROJECTILE_HIT_PARTICLES);}
+
+            this.setPose(EntityPose.DYING);}}
 }

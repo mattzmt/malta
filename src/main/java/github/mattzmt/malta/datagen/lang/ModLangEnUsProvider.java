@@ -53,6 +53,9 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
         translationBuilder.add(ModItems.BIGILLA_DIPPED_GALLETTA, "Bigilla dipped Galletta");
         translationBuilder.add(ModItems.GBEJNA_DIP, "Ġbejna Dip");
         translationBuilder.add(ModItems.GBEJNA_DIPPED_GALLETTA, "Ġbejna dipped Galletta");
+        translationBuilder.add(ModItems.RAW_SNAIL, "Raw Snail");
+        translationBuilder.add(ModItems.COOKED_SNAIL, "Cooked Snail");
+        translationBuilder.add(ModItems.SNAIL_SHELL, "Snail Shell");
 
         //BLOCKS
         translationBuilder.add(ModBlocks.BLACK_PEPPER_CROP, "Black Pepper Crop");

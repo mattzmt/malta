@@ -74,6 +74,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GBEJNA_DIP, Models.GENERATED);
         itemModelGenerator.register(ModItems.GBEJNA_DIPPED_GALLETTA, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_SNAIL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_SNAIL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SNAIL_SHELL, Models.GENERATED);
     }
 
     private Identifier createSubModel(BlockStateModelGenerator generator, String suffix) {
