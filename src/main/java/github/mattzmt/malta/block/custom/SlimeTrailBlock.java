@@ -31,10 +31,6 @@ public class SlimeTrailBlock extends Block {
         return FLAT_SHAPE;}
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return FLAT_SHAPE;}
-
-    @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(AGE);}
 

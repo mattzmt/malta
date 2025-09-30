@@ -7,4 +7,5 @@ import net.minecraft.entity.passive.Cracks;
 public class SnailRenderState extends LivingEntityRenderState {
     public final AnimationState idleAnimationState = new AnimationState();
     public final AnimationState walkingAnimationState = new AnimationState();
-    public Cracks.CrackLevel crackLevel = Cracks.CrackLevel.NONE;}
+    public Cracks.CrackLevel crackLevel = Cracks.CrackLevel.NONE;
+    public int texture;}
