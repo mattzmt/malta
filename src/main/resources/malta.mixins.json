@@ -1,14 +1,14 @@
 {
-	"required": true,
-	"package": "github.mattzmt.malta.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
+  "required": true,
+  "package": "github.mattzmt.malta.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CracksAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
 	}
 }

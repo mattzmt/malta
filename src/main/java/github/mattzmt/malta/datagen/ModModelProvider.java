@@ -1,14 +1,16 @@
 package github.mattzmt.malta.datagen;
 
+import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.block.ModBlocks;
 import github.mattzmt.malta.block.custom.BlackPepperCropBlock;
 import github.mattzmt.malta.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
-import net.minecraft.client.data.TexturedModel;
+import net.minecraft.client.data.*;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
+
+import static net.minecraft.client.data.BlockStateModelGenerator.createWeightedVariant;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -42,6 +44,14 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.DATE_PALM_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.OLIVE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+
+        blockStateModelGenerator.blockStateCollector.accept(
+                VariantsBlockModelDefinitionCreator.of(ModBlocks.SLIME_TRAIL).with(
+                                BlockStateVariantMap.models(Properties.AGE_3)
+                                        .register(0, createWeightedVariant(createSubModel(blockStateModelGenerator, "_0")))
+                                        .register(1, createWeightedVariant(createSubModel(blockStateModelGenerator, "_1")))
+                                        .register(2, createWeightedVariant(createSubModel(blockStateModelGenerator, "_2")))
+                                        .register(3, createWeightedVariant(createSubModel(blockStateModelGenerator, "_3")))));
     }
 
     @Override
@@ -65,4 +75,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GBEJNA_DIPPED_GALLETTA, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNAIL_SPAWN_EGG, Models.GENERATED);
     }
+
+    private Identifier createSubModel(BlockStateModelGenerator generator, String suffix) {
+        return Models.CARPET.upload(
+                ModBlocks.SLIME_TRAIL,
+                suffix,
+                TextureMap.of(TextureKey.WOOL, Malta.id("block/slime_trail"+suffix)),
+                generator.modelCollector);}
 }

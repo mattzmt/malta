@@ -1,27 +1,29 @@
 package github.mattzmt.malta.entity.client;
 
-import github.mattzmt.malta.entity.client.renderer.SnailEntityRenderState;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+import github.mattzmt.malta.Malta;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.model.EntityModel;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.MathHelper;
 
-@Environment(EnvType.CLIENT)
-public class SnailModel extends EntityModel<SnailEntityRenderState> {
-    private final Animation idleAnimation;
-    private final Animation walkingAnimation;
-
+public class SnailModel extends EntityModel<SnailRenderState> {
+    public static final EntityModelLayer SNAIL = new EntityModelLayer(Identifier.of(Malta.MOD_ID, "snail"), "main");
     private final ModelPart snail;
     private final ModelPart head;
 
-    public SnailModel(ModelPart modelPart) {
-        super(modelPart);
-        this.snail = modelPart.getChild("snail");
+    private final Animation walkingAnimation;
+    private final Animation idlingAnimation;
+
+
+    public SnailModel(ModelPart root) {
+        super(root);
+        this.snail = root.getChild("snail");
         this.head = this.snail.getChild("head");
 
-        this.idleAnimation = SnailAnimations.IDLE.createAnimation(modelPart);
-        this.walkingAnimation = SnailAnimations.WALKING.createAnimation(modelPart);
+        this.walkingAnimation = SnailAnimations.ANIM_SNAIL_WALK.createAnimation(root);
+        this.idlingAnimation = SnailAnimations.ANIM_SNAIL_IDLE.createAnimation(root);
     }
 
     public static TexturedModelData getTexturedModelData() {
@@ -54,24 +56,19 @@ public class SnailModel extends EntityModel<SnailEntityRenderState> {
     }
 
     @Override
-    public void setAngles(SnailEntityRenderState state) {
+    public void setAngles(SnailRenderState state) {
         super.setAngles(state);
+        this.setHeadAngles(state.relativeHeadYaw, state.pitch);
 
-        float yaw = state.relativeHeadYaw * ((float)Math.PI / 180F);
-        float pitch = state.pitch * ((float)Math.PI / 180F);
-
-        this.head.yaw = yaw;
-        this.head.pitch = pitch;
-
-        this.idleAnimation.apply(SnailEntityRenderState.idleAnimationState, SnailEntityRenderState.age);
-        this.walkingAnimation.apply(SnailEntityRenderState.walkingAnimationState, SnailEntityRenderState.age);
+        this.walkingAnimation.apply(state.walkingAnimationState, state.age, 1f);
+        this.idlingAnimation.apply(state.idleAnimationState, state.age, 1f);
     }
 
-    public ModelPart getHead() {
-        return head;
-    }
+    private void setHeadAngles(float headYaw, float headPitch) {
+        headYaw = MathHelper.clamp(headYaw, -30.0F, 30.0F);
+        headPitch = MathHelper.clamp(headPitch, -25.0F, 45.0F);
 
-    public ModelPart getSnail() {
-        return snail;
+        this.head.yaw = headYaw * 0.017453292F;
+        this.head.pitch = headPitch * 0.017453292F;
     }
 }

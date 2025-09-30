@@ -10,11 +10,13 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
 public class ModEntities {
-    private static final RegistryKey<EntityType<?>> SNAIL_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Malta.id("snail"));
+    private static final RegistryKey<EntityType<?>> SNAIL_KEY =
+            RegistryKey.of(RegistryKeys.ENTITY_TYPE, Malta.id("snail"));
+
     public static final EntityType<SnailEntity> SNAIL = Registry.register(Registries.ENTITY_TYPE,
             Malta.id("snail"),
             EntityType.Builder.create(SnailEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(0.8f, 0.6f).build(SNAIL_KEY));
+                    .dimensions(0.6f, 0.6f).build(SNAIL_KEY));
 
     public static void registerModEntities() {
         Malta.LOGGER.info("Registering mod entities for "+Malta.MOD_ID);

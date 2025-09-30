@@ -1,12 +1,9 @@
 package github.mattzmt.malta.entity.client;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.render.entity.animation.*;
 
-@Environment(EnvType.CLIENT)
 public class SnailAnimations {
-    public static final AnimationDefinition WALKING = AnimationDefinition.Builder.create(2.0F).looping()
+    public static final AnimationDefinition ANIM_SNAIL_WALK = AnimationDefinition.Builder.create(2f).looping()
             .addBoneAnimation("head", new Transformation(Transformation.Targets.ROTATE,
                     new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
                     new Keyframe(0.5F, AnimationHelper.createRotationalVector(0.0F, 10.0F, 0.0F), Transformation.Interpolations.CUBIC),
@@ -29,7 +26,7 @@ public class SnailAnimations {
             ))
             .build();
 
-    public static final AnimationDefinition IDLE = AnimationDefinition.Builder.create(20.0F).looping()
+    public static final AnimationDefinition ANIM_SNAIL_IDLE = AnimationDefinition.Builder.create(20.0F).looping()
             .addBoneAnimation("head", new Transformation(Transformation.Targets.ROTATE,
                     new Keyframe(9.75F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
                     new Keyframe(10.75F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 7.5F), Transformation.Interpolations.CUBIC),

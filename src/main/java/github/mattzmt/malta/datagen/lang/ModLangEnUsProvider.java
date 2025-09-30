@@ -71,6 +71,7 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.STRIPPED_OLIVE_WOOD, "Stripped Olive Wood");
         translationBuilder.add(ModBlocks.OLIVE_PLANKS, "Olive Planks");
         translationBuilder.add(ModBlocks.OLIVE_SAPLING, "Olive Sapling");
+        translationBuilder.add(ModBlocks.SLIME_TRAIL, "Slime Trail");
 
         //ENTITIES
         translationBuilder.add(ModEntities.SNAIL, "Snail");

@@ -1,7 +1,6 @@
-package github.mattzmt.malta.entity.client.renderer;
+package github.mattzmt.malta.entity.client;
 
 import github.mattzmt.malta.Malta;
-import github.mattzmt.malta.entity.client.SnailModel;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 
