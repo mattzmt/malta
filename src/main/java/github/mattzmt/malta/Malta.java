@@ -5,6 +5,7 @@ import github.mattzmt.malta.entity.ModEntities;
 import github.mattzmt.malta.entity.custom.SnailEntity;
 import github.mattzmt.malta.item.ModItemGroups;
 import github.mattzmt.malta.item.ModItems;
+import github.mattzmt.malta.sound.ModSounds;
 import github.mattzmt.malta.util.ModLootTableModifiers;
 import github.mattzmt.malta.world.gen.ModFoliagePlacers;
 import github.mattzmt.malta.world.gen.ModWorldGeneration;
@@ -41,6 +42,7 @@ public class Malta implements ModInitializer {
         ModWorldGeneration.generateModWorldGen();
         ModFoliagePlacers.load();
         ModEntities.registerModEntities();
+		ModSounds.registerSounds();
 
         FabricDefaultAttributeRegistry.register(ModEntities.SNAIL, SnailEntity.createAttributes());
 

@@ -53,6 +53,7 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
         translationBuilder.add(ModItems.BIGILLA_DIPPED_GALLETTA, "Bigilla dipped Galletta");
         translationBuilder.add(ModItems.GBEJNA_DIP, "Ġbejna Dip");
         translationBuilder.add(ModItems.GBEJNA_DIPPED_GALLETTA, "Ġbejna dipped Galletta");
+        translationBuilder.add(ModItems.SNAIL_SPAWN_EGG, "Snail Spawn Egg");
         translationBuilder.add(ModItems.RAW_SNAIL, "Raw Snail");
         translationBuilder.add(ModItems.COOKED_SNAIL, "Cooked Snail");
         translationBuilder.add(ModItems.SNAIL_SHELL, "Snail Shell");
@@ -78,5 +79,10 @@ public class ModLangEnUsProvider  extends FabricLanguageProvider {
 
         //ENTITIES
         translationBuilder.add(ModEntities.SNAIL, "Snail");
+
+		//SOUNDS
+		translationBuilder.add("subtitles.malta.snail_hit", "Snail hurts");
+		translationBuilder.add("subtitles.malta.snail_shell_crack", "Snail shell cracks");
+		translationBuilder.add("subtitles.malta.snail_death", "Snail dies");
     }
 }

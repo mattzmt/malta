@@ -37,5 +37,9 @@
   "item.malta.salmon_dip": "Smoked Salmon Dip",
   "item.malta.salmon_dipped_galletta": "Smoked Salmon dipped Galletta",
   "item.malta.snail_shell": "Snail Shell",
-  "itemGroup.malta.nev_group": "Malta"
+  "item.malta.snail_spawn_egg": "Snail Spawn Egg",
+  "itemGroup.malta.nev_group": "Malta",
+  "subtitles.malta.snail_death": "Snail dies",
+  "subtitles.malta.snail_hit": "Snail hurts",
+  "subtitles.malta.snail_shell_crack": "Snail shell cracks"
 }

@@ -35,7 +35,7 @@ public class MaltaClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.OLIVE_SAPLING, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.SLIME_TRAIL, BlockRenderLayer.TRANSLUCENT);
 
-        SnailModelLayers.registerLayers();
+		SnailModelLayers.registerLayers();
         EntityRendererRegistry.register(ModEntities.SNAIL, SnailRenderer::new);
 
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {

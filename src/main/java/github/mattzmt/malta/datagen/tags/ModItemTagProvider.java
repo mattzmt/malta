@@ -2,8 +2,10 @@ package github.mattzmt.malta.datagen.tags;
 
 import github.mattzmt.malta.block.ModBlocks;
 import github.mattzmt.malta.item.ModItems;
+import github.mattzmt.malta.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -93,5 +95,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.BIGILLA_DIPPED_GALLETTA)
                 .add(ModItems.GBEJNA_DIPPED_GALLETTA)
                 .add(ModItems.COOKED_SNAIL);
+
+		valueLookupBuilder(ModTags.Items.SNAIL_FOOD)
+				.add(Items.RED_MUSHROOM)
+				.add(Items.BROWN_MUSHROOM);
     }
 }
