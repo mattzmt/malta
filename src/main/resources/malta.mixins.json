@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "github.mattzmt.malta.mixin",
+  "package": "github.mattzmt.malta.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "CracksAccessor"
@@ -10,5 +10,5 @@
   },
   "overwrites": {
     "requireAnnotations": true
-	}
+  }
 }

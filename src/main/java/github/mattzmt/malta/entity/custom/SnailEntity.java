@@ -58,7 +58,7 @@ public class SnailEntity extends TameableEntity {
 		this.goalSelector.add(2, new FollowOwnerGoal(this, 1.0, 10.0F, 2.0F));
         this.goalSelector.add(3, new AnimalMateGoal(this, 1.5D));
         this.goalSelector.add(4, new TemptGoal(this, 1.5D, stack -> stack.isIn(ModTags.Items.SNAIL_FOOD), false));
-        this.goalSelector.add(5, new FollowParentGoal(this, 2D));
+        this.goalSelector.add(5, new FollowParentGoal(this, 1.5D));
         this.goalSelector.add(6, new WanderAroundFarGoal(this, 1D));
         this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.add(7, new LookAroundGoal(this));}

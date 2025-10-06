@@ -1,4 +1,4 @@
-package github.mattzmt.malta.mixin;
+package github.mattzmt.malta.mixins;
 
 import net.minecraft.entity.passive.Cracks;
 import org.spongepowered.asm.mixin.Mixin;

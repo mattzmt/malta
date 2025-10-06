@@ -118,9 +118,9 @@ public class ModItems {
             "snail_spawn_egg",
             new SpawnEggItem(ModEntities.SNAIL, newSettings("snail_spawn_egg")));
 
-    public static final Item SNAIL_SHELL = register(
+    public static final BlockItem SNAIL_SHELL = register(
             "snail_shell",
-            new Item(newSettings("snail_shell")));
+            new BlockItem(ModBlocks.SNAIL_SHELL, newSettings("snail_shell")));
 
     public static final Item RAW_SNAIL = register(
             "raw_snail",

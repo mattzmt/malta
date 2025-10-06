@@ -3,7 +3,9 @@ package github.mattzmt.malta.block;
 import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.block.custom.BlackPepperCropBlock;
 import github.mattzmt.malta.block.custom.SlimeTrailBlock;
+import github.mattzmt.malta.block.custom.SnailShellBlock;
 import github.mattzmt.malta.item.ModItems;
+import github.mattzmt.malta.sound.ModSounds;
 import github.mattzmt.malta.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -116,13 +118,23 @@ public class ModBlocks {
     public static final Block SLIME_TRAIL = register(
             "slime_trail",
             new SlimeTrailBlock(
-            newSettings("slime_trail")
-                    .mapColor(MapColor.PALE_GREEN)
-                    .sounds(BlockSoundGroup.SLIME)
-                    .nonOpaque()
-                    .noCollision()
-                    .pistonBehavior(PistonBehavior.DESTROY))
-    );
+					newSettings("slime_trail")
+                    	.mapColor(MapColor.PALE_GREEN)
+                    	.sounds(BlockSoundGroup.SLIME)
+                    	.nonOpaque()
+                    	.noCollision()
+                    	.pistonBehavior(PistonBehavior.DESTROY)
+						.replaceable()));
+
+	public static final Block SNAIL_SHELL = register(
+			"snail_shell",
+			new SnailShellBlock(
+					newSettings("snail_shell")
+							.mapColor(MapColor.TERRACOTTA_BROWN)
+							.nonOpaque()
+							.pistonBehavior(PistonBehavior.DESTROY)
+							.breakInstantly()
+			));
 
     private static <T extends Block> T register(String name, T block) {
         return Registry.register(Registries.BLOCK, Malta.id(name), block);}

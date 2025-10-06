@@ -52,6 +52,8 @@ public class ModModelProvider extends FabricModelProvider {
                                         .register(1, createWeightedVariant(createSubModel(blockStateModelGenerator, "_1")))
                                         .register(2, createWeightedVariant(createSubModel(blockStateModelGenerator, "_2")))
                                         .register(3, createWeightedVariant(createSubModel(blockStateModelGenerator, "_3")))));
+
+		blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.SNAIL_SHELL);
     }
 
     @Override

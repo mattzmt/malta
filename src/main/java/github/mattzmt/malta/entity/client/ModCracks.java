@@ -1,6 +1,6 @@
 package github.mattzmt.malta.entity.client;
 
-import github.mattzmt.malta.mixin.CracksAccessor;
+import github.mattzmt.malta.mixins.CracksAccessor;
 import net.minecraft.entity.passive.Cracks;
 
 public class ModCracks {

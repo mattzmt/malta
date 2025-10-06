@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "malta:block/snail_shell",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "malta:block/snail_shell"
+    },
+    "facing=south": {
+      "model": "malta:block/snail_shell",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "malta:block/snail_shell",
+      "y": 270
+    }
+  }
+}

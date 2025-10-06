@@ -50,6 +50,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_OLIVE_WOOD);
         addDrop(ModBlocks.OLIVE_PLANKS);
         addDrop(ModBlocks.OLIVE_SAPLING);
+        addDrop(ModBlocks.SNAIL_SHELL, ModItems.SNAIL_SHELL);
     }
 
     public LootTable.Builder fruitLeavesDrops(Block leaves, Block sapling, Item fruit, float... saplingChance) {

@@ -24,5 +24,30 @@
       "minecraft:mob/turtle/egg/egg_break1",
       "minecraft:mob/turtle/egg/egg_break2"
     ]
+  },
+  "snail_shell_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "minecraft:mob/turtle/egg/egg_break1",
+      "minecraft:mob/turtle/egg/egg_break2"
+    ]
+  },
+  "snail_shell_fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      "mob/turtle/egg/jump_egg1",
+      "mob/turtle/egg/jump_egg2",
+      "mob/turtle/egg/jump_egg3",
+      "mob/turtle/egg/jump_egg4"
+    ]
+  },
+  "snail_shell_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "mob/turtle/egg/jump_egg1",
+      "mob/turtle/egg/jump_egg2",
+      "mob/turtle/egg/jump_egg3",
+      "mob/turtle/egg/jump_egg4"
+    ]
   }
 }
