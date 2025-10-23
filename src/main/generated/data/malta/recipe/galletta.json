@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "malta:dough"
+  },
+  "pattern": [
+    "DD"
+  ],
+  "result": {
+    "count": 4,
+    "id": "malta:galletta"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_salmon_dip": {
+      "conditions": {
+        "items": [
+          {
+            "items": "malta:salmon_dip"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "malta:salmon_dipped_galletta"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_salmon_dip"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "malta:salmon_dipped_galletta"
+    ]
+  }
+}

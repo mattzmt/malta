@@ -2,6 +2,9 @@
   "required": true,
   "package": "github.mattzmt.malta.mixins",
   "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CracksAccessor"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

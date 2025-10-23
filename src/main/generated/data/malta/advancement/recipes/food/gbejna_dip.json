@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bowl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bowl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gbejna": {
+      "conditions": {
+        "items": [
+          {
+            "items": "malta:gbejna"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_olive_oil": {
+      "conditions": {
+        "items": [
+          {
+            "items": "malta:olive_oil"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_peppercorns": {
+      "conditions": {
+        "items": [
+          {
+            "items": "malta:peppercorns"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "malta:gbejna_dip"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gbejna",
+      "has_olive_oil",
+      "has_peppercorns",
+      "has_bowl"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "malta:gbejna_dip"
+    ]
+  }
+}
