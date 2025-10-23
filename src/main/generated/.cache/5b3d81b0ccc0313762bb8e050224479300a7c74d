@@ -1,13 +1,1 @@
 // 1.21.8	-999999999-01-01T00:00:00	malta/Tags for minecraft:block
-3d20f14a36aca3b9ab189604859e151c23046f32 data/minecraft/tags/block/bee_attractive.json
-d3ecf8f806e495e72269f5ad825a49250a5ff67c data/minecraft/tags/block/bee_growables.json
-3b90b2c8a7054aaf7f743214157659ff6a8703d1 data/minecraft/tags/block/completes_find_tree_tutorial.json
-d3ecf8f806e495e72269f5ad825a49250a5ff67c data/minecraft/tags/block/crops.json
-9688aea0560df5dca0d126350e2bb1c49ca5fc9c data/minecraft/tags/block/leaves.json
-3b90b2c8a7054aaf7f743214157659ff6a8703d1 data/minecraft/tags/block/logs.json
-3b90b2c8a7054aaf7f743214157659ff6a8703d1 data/minecraft/tags/block/logs_that_burn.json
-d3ecf8f806e495e72269f5ad825a49250a5ff67c data/minecraft/tags/block/maintains_farmland.json
-3b90b2c8a7054aaf7f743214157659ff6a8703d1 data/minecraft/tags/block/mineable/axe.json
-0b323ac83c6573686593862c8f3ba2dcc6bb5d81 data/minecraft/tags/block/planks.json
-fb8eeb04d8c393df7a1ef58b3025107cef0ee53e data/minecraft/tags/block/sand.json
-b935954f9fc8e87c9887624884fbe5f38e3cdb60 data/minecraft/tags/block/saplings.json

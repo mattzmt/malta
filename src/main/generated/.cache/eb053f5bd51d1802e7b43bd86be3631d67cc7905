@@ -1,15 +1,1 @@
 // 1.21.8	-999999999-01-01T00:00:00	malta/Tags for minecraft:item
-36a491a695201f5b03b2c0cca537c626edbc6f3f data/malta/tags/item/snail_food.json
-d9726abbf946f2f75b1865ca29fc6d36a984c331 data/minecraft/tags/item/bee_food.json
-b0603067fd960cb509ec38254a7d4bc08f4f3912 data/minecraft/tags/item/chicken_food.json
-3b90b2c8a7054aaf7f743214157659ff6a8703d1 data/minecraft/tags/item/completes_find_tree_tutorial.json
-b1d43e3ed9ae017bb6b5e4206b43ef16416e28b3 data/minecraft/tags/item/creeper_igniters.json
-9688aea0560df5dca0d126350e2bb1c49ca5fc9c data/minecraft/tags/item/leaves.json
-3b90b2c8a7054aaf7f743214157659ff6a8703d1 data/minecraft/tags/item/logs.json
-3b90b2c8a7054aaf7f743214157659ff6a8703d1 data/minecraft/tags/item/logs_that_burn.json
-450350461b13b88956b4640aabc9bc9553d3cb6e data/minecraft/tags/item/parrot_food.json
-5ee0f896ade2acddcd6e89c046e05d5f222ed3b8 data/minecraft/tags/item/pig_food.json
-ad2315eb1243bbe730cec4270debbd4a37a134a2 data/minecraft/tags/item/planks.json
-683b04313054aefeeaf09827a2f53dd60a21f1e0 data/minecraft/tags/item/saplings.json
-8b11858fe0cef0f9120a2079e54efb3193d0038f data/minecraft/tags/item/villager_picks_up.json
-490274a38ab9da516bad01df7549e3db328094a4 data/minecraft/tags/item/villager_plantable_seeds.json

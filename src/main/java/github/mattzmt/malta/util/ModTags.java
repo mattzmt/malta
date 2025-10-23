@@ -7,7 +7,7 @@ import net.minecraft.registry.tag.TagKey;
 
 public class ModTags {
 	public static class Items {
-		public static final TagKey<Item> SNAIL_FOOD = createTag("snail_food");
+
 
 		private static TagKey<Item> createTag(String name) {
 			return TagKey.of(RegistryKeys.ITEM, Malta.id(name));
