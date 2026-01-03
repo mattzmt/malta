@@ -2,6 +2,8 @@ package github.mattzmt.malta;
 
 import github.mattzmt.malta.datagen.*;
 import github.mattzmt.malta.datagen.lang.ModLangEnUsProvider;
+import github.mattzmt.malta.datagen.lang.ModLangEnGbProvider;
+import github.mattzmt.malta.datagen.lang.ModLangMtMtProvider;
 import github.mattzmt.malta.datagen.tags.ModBlockTagProvider;
 import github.mattzmt.malta.datagen.tags.ModItemTagProvider;
 import github.mattzmt.malta.world.ModConfiguredFeatures;
@@ -17,6 +19,8 @@ public class MaltaDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(ModLangEnUsProvider::new);
+        pack.addProvider(ModLangEnGbProvider::new);
+        pack.addProvider(ModLangMtMtProvider::new);
         pack.addProvider(ModBlockTagProvider::new);
         pack.addProvider(ModItemTagProvider::new);
         pack.addProvider(ModLootTableProvider::new);
