@@ -18,23 +18,20 @@ import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.registry.tag.DamageTypeTags;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.storage.ReadView;
 import net.minecraft.storage.WriteView;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.GameRules;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import net.minecraft.world.rule.GameRules;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
@@ -147,7 +144,7 @@ public class SnailEntity extends TameableEntity {
         super.tickMovement();
 
         if (!(this.getEntityWorld() instanceof ServerWorld serverWorld)) return;
-        if (!serverWorld.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) return;
+        if (!serverWorld.getGameRules().getValue(GameRules.DO_MOB_GRIEFING)) return;
 
         BlockState blockState = ModBlocks.SLIME_TRAIL.getDefaultState();
 

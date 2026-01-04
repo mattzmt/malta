@@ -3,7 +3,7 @@ package github.mattzmt.malta.entity.client;
 import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.entity.custom.SnailEntity;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.RenderLayers;
 import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
@@ -47,6 +47,6 @@ public class SnailRenderer extends MobEntityRenderer<SnailEntity, SnailRenderSta
 
 	@Override
 	protected RenderLayer getRenderLayer(SnailRenderState state, boolean showBody, boolean translucent, boolean showOutline) {
-		return RenderLayer.getEntityTranslucent(getTexture(state));
+		return RenderLayers.entityTranslucent(getTexture(state));
 	}
 }

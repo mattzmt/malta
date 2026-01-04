@@ -8,6 +8,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.text.Text;
+import net.minecraft.world.attribute.BackgroundMusic;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
@@ -45,7 +47,7 @@ public class ModBiomes {
 
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
         spawnBuilder.spawn(SpawnGroup.CREATURE, 8, new SpawnSettings.SpawnEntry(EntityType.RABBIT, 1, 6));
-        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+        DefaultBiomeFeatures.addCaveAndMonsters(spawnBuilder);
 
         DefaultBiomeFeatures.addFossils(biomeBuilder);
         addBasicFeatures(biomeBuilder);
@@ -65,14 +67,13 @@ public class ModBiomes {
                 .temperature(0.9f)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
-                .effects((new BiomeEffects.Builder())
+				.setEnvironmentAttribute(EnvironmentAttributes.WATER_FOG_COLOR_VISUAL, -11097619)
+				.setEnvironmentAttribute(EnvironmentAttributes.SKY_COLOR_VISUAL, -8869889)
+				.setEnvironmentAttribute(EnvironmentAttributes.FOG_COLOR_VISUAL, -8869889)
+                .effects(new BiomeEffects.Builder()
                         .waterColor(0x56A9ED)
-                        .waterFogColor(0x56A9ED)
                         .grassColor(0x9ABE4B)
                         .foliageColor(0x82AC1E)
-                        .skyColor(0x78A7FF)
-                        .fogColor(0x78A7FF)
-                        .moodSound(BiomeMoodSound.CAVE)
                         .build())
                 .build();
     }

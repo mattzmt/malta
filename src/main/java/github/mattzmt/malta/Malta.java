@@ -48,19 +48,21 @@ public class Malta implements ModInitializer {
 
         CompostingChanceRegistry.INSTANCE.add(ModItems.PEPPERCORNS, 0.2f);
 
-        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> factories.add((entity, random) -> new TradeOffer(
-                new TradedItem(Items.EMERALD, 2),
-                new ItemStack(ModItems.PEPPERCORNS, 20),
-                16,
-                2,
-                0.04f)));
+		TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
+			factories.add((world,entity, random) -> new TradeOffer(
+					new TradedItem(Items.EMERALD, 2),
+					new ItemStack(ModItems.PEPPERCORNS, 20),
+					16,
+					2,
+					0.04f));
 
-        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> factories.add((entity, random) -> new TradeOffer(
-                new TradedItem(ModItems.PEPPERCORNS, 26),
-                new ItemStack(Items.EMERALD, 1),
-                16,
-                2,
-                0.04f)));
+			factories.add((world,entity, random) -> new TradeOffer(
+					new TradedItem(ModItems.PEPPERCORNS, 26),
+					new ItemStack(Items.EMERALD, 1),
+					16,
+					2,
+					0.04f));
+		});
 
         StrippableBlockRegistry.register(ModBlocks.DATE_PALM_LOG, ModBlocks.STRIPPED_DATE_PALM_LOG);
         StrippableBlockRegistry.register(ModBlocks.DATE_PALM_WOOD, ModBlocks.STRIPPED_DATE_PALM_WOOD);
