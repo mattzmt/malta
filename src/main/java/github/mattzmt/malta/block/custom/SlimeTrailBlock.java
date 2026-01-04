@@ -108,7 +108,7 @@ public class SlimeTrailBlock extends Block {
 	}
 
 	@Override
-	public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler) {
+	protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler, boolean bl) {
 		if (world.isClient()) return;
 
 		if (entity instanceof HostileEntity hostile) {
