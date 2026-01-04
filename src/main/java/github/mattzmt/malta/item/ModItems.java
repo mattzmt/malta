@@ -3,6 +3,7 @@ package github.mattzmt.malta.item;
 import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.block.ModBlocks;
 import github.mattzmt.malta.entity.ModEntities;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -116,7 +117,7 @@ public class ModItems {
 
     public static final Item SNAIL_SPAWN_EGG = register(
             "snail_spawn_egg",
-            new SpawnEggItem(ModEntities.SNAIL, newSettings("snail_spawn_egg")));
+            new SpawnEggItem(entitySettings("snail_spawn_egg", ModEntities.SNAIL)));
 
     public static final BlockItem SNAIL_SHELL = register(
             "snail_shell",
@@ -139,6 +140,9 @@ public class ModItems {
 
     private static Item.Settings newSettings(String name) {
         return new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Malta.id(name)));}
+
+	private static Item.Settings entitySettings(String name, EntityType<?> entityType) {
+		return new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Malta.id(name))).spawnEgg(entityType);}
 
     public static void load() {}
 }

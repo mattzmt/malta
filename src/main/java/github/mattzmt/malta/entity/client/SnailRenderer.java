@@ -4,8 +4,10 @@ import github.mattzmt.malta.Malta;
 import github.mattzmt.malta.entity.custom.SnailEntity;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
+import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
@@ -20,15 +22,17 @@ public class SnailRenderer extends MobEntityRenderer<SnailEntity, SnailRenderSta
     public Identifier getTexture(SnailRenderState state) {
         return DEFAULT_TEXTURE;}
 
-    @Override
-    public void render(SnailRenderState state, MatrixStack matrixStack,
-                       VertexConsumerProvider vertexConsumerProvider, int i) {
-        if(state.baby)
-            matrixStack.scale(0.5f, 0.5f, 0.5f);
-        else
-            matrixStack.scale(1f, 1f, 1f);
+	@Override
+	public void render(SnailRenderState state, MatrixStack matrixStack,
+					   OrderedRenderCommandQueue orderedRenderCommandQueue, CameraRenderState cameraRenderState) {
+		if(state.baby) {
+			matrixStack.scale(0.5f, 0.5f, 0.5f);
+		} else {
+			matrixStack.scale(1f, 1f, 1f);
+		}
 
-        super.render(state, matrixStack, vertexConsumerProvider, i);}
+		super.render(state, matrixStack, orderedRenderCommandQueue, cameraRenderState);
+	}
 
     @Override
     public SnailRenderState createRenderState() {

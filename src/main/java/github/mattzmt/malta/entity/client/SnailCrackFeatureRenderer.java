@@ -4,7 +4,9 @@ import com.google.common.collect.ImmutableMap;
 import github.mattzmt.malta.Malta;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.entity.feature.FeatureRenderer;
 import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.client.util.math.MatrixStack;
@@ -28,14 +30,12 @@ public class SnailCrackFeatureRenderer extends FeatureRenderer<SnailRenderState,
         super(featureRendererContext);
     }
 
-    public void render(
-            MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, SnailRenderState snailRenderState, float f, float g
-    ) {
-        if (!snailRenderState.invisible) {
-            Cracks.CrackLevel crackLevel = snailRenderState.crackLevel;
+	public void render(MatrixStack matrices, OrderedRenderCommandQueue queue, int light, SnailRenderState state, float limbAngle, float limbDistance) {
+        if (!state.invisible) {
+            Cracks.CrackLevel crackLevel = state.crackLevel;
             if (crackLevel != Cracks.CrackLevel.NONE) {
                 Identifier identifier = (Identifier)CRACK_TEXTURES.get(crackLevel);
-                renderModel(this.getContextModel(), identifier, matrixStack, vertexConsumerProvider, i, snailRenderState, -1);
+                renderModel(this.getContextModel(), identifier, matrices, queue, light, state, -1, OverlayTexture.DEFAULT_UV);
             }
         }
     }

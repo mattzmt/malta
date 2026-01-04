@@ -3,7 +3,7 @@ plugins {
 	id 'maven-publish'
 }
 
-version = project.mod_version
+version = project.mod_version + "-for-minecraft-" + minecraft_version
 group = project.maven_group
 
 base {
@@ -27,7 +27,7 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-    modImplementation "com.github.glitchfiend:TerraBlender-fabric:1.21.8-6.0.0.3"
+    modImplementation "com.github.glitchfiend:TerraBlender-fabric:${project.terrablender_version}"
 }
 
 processResources {

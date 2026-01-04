@@ -81,14 +81,14 @@ public class SnailEntity extends TameableEntity {
         }
     }
 
-    @Override
-    public void tick() {
-        super.tick();
+	@Override
+	public void tick() {
+		super.tick();
 
-        if (this.getWorld().isClient()) {
-            this.setupAnimationStates();
-        }
-    }
+		if (this.getEntityWorld().isClient()) {
+			this.setupAnimationStates();
+		}
+	}
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
@@ -146,7 +146,7 @@ public class SnailEntity extends TameableEntity {
     public void tickMovement() {
         super.tickMovement();
 
-        if (!(this.getWorld() instanceof ServerWorld serverWorld)) return;
+        if (!(this.getEntityWorld() instanceof ServerWorld serverWorld)) return;
         if (!serverWorld.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) return;
 
         BlockState blockState = ModBlocks.SLIME_TRAIL.getDefaultState();
@@ -156,15 +156,15 @@ public class SnailEntity extends TameableEntity {
 			int k = MathHelper.floor(this.getY());
 			int l = MathHelper.floor(this.getZ() + (i / 2 % 2 * 2 - 1) * 0.25F);
 			BlockPos blockPos = new BlockPos(j, k, l);
-			if (this.getWorld().getBlockState(blockPos).isAir() && blockState.canPlaceAt(this.getWorld(), blockPos)) {
-				this.getWorld().setBlockState(blockPos, blockState);
-				this.getWorld().emitGameEvent(GameEvent.BLOCK_PLACE, blockPos, GameEvent.Emitter.of(this, blockState));}}}
+			if (this.getEntityWorld().getBlockState(blockPos).isAir() && blockState.canPlaceAt(this.getEntityWorld(), blockPos)) {
+				this.getEntityWorld().setBlockState(blockPos, blockState);
+				this.getEntityWorld().emitGameEvent(GameEvent.BLOCK_PLACE, blockPos, GameEvent.Emitter.of(this, blockState));}}}
 
     public boolean brushable() {
         if (this.isBaby())
             return false;
         else {
-            if (this.getWorld() instanceof ServerWorld serverWorld) {
+            if (this.getEntityWorld() instanceof ServerWorld serverWorld) {
                 this.dropStack(serverWorld, new ItemStack(Items.SLIME_BALL));
                 this.emitGameEvent(GameEvent.ENTITY_INTERACT);
                 this.playSoundIfNotSilent(SoundEvents.ENTITY_SLIME_HURT);
@@ -176,9 +176,9 @@ public class SnailEntity extends TameableEntity {
         ItemStack itemStack = player.getStackInHand(hand);
 
         if (itemStack.isOf(Items.BRUSH) && this.brushable()) {
-            itemStack.damage(8, player, getSlotForHand(hand));
+            itemStack.damage(8, player, hand.getEquipmentSlot());
             return ActionResult.SUCCESS;
-        } else if (!this.isTamed() && !this.getWorld().isClient && itemStack.isOf(Items.MOSS_BLOCK)) {
+        } else if (!this.isTamed() && !this.getEntityWorld().isClient() && itemStack.isOf(Items.MOSS_BLOCK)) {
 			itemStack.decrementUnlessCreative(1, player);
 			this.tryTame(player);
 			return ActionResult.SUCCESS_SERVER;
@@ -228,9 +228,9 @@ public class SnailEntity extends TameableEntity {
 			this.setTamedBy(player);
 			this.navigation.stop();
 			this.setTarget(null);
-			this.getWorld().sendEntityStatus(this, EntityStatuses.ADD_POSITIVE_PLAYER_REACTION_PARTICLES);
+			this.getEntityWorld().sendEntityStatus(this, EntityStatuses.ADD_POSITIVE_PLAYER_REACTION_PARTICLES);
 		} else
-			this.getWorld().sendEntityStatus(this, EntityStatuses.ADD_NEGATIVE_PLAYER_REACTION_PARTICLES);}
+			this.getEntityWorld().sendEntityStatus(this, EntityStatuses.ADD_NEGATIVE_PLAYER_REACTION_PARTICLES);}
 
 	@Override
 	public boolean canBreedWith(AnimalEntity other) {

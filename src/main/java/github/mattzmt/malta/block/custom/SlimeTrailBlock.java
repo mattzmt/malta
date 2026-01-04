@@ -109,7 +109,7 @@ public class SlimeTrailBlock extends Block {
 
 	@Override
 	public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler) {
-		if (world.isClient) return;
+		if (world.isClient()) return;
 
 		if (entity instanceof HostileEntity hostile) {
 			hostile.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 5 * 20, 2, false, false, true));
